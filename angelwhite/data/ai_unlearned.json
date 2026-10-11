@@ -1,0 +1,1176 @@
+[
+  {
+    "text": "ういーす",
+    "mode": "一般モード",
+    "timestamp": "2026-10-10T17:28:20"
+  },
+  {
+    "text": "ｓ",
+    "mode": "一般モード",
+    "timestamp": "2026-10-10T17:28:36"
+  },
+  {
+    "text": "ss",
+    "mode": "一般モード",
+    "timestamp": "2026-10-10T17:30:25"
+  },
+  {
+    "text": "sss",
+    "mode": "一般モード",
+    "timestamp": "2026-10-10T17:38:37"
+  },
+  {
+    "text": "よろしく",
+    "mode": "一般モード",
+    "timestamp": "2026-10-10T17:43:31"
+  },
+  {
+    "text": "またどら",
+    "mode": "一般モード",
+    "timestamp": "2026-10-10T17:43:59"
+  },
+  {
+    "key": "こんにちは",
+    "text": "こんにちは",
+    "mode": "一般モード",
+    "seen_count": 1,
+    "confidence": 0.0,
+    "status": "candidate",
+    "first_seen": "2026-10-10T17:56:47",
+    "last_seen": "2026-10-10T17:56:47"
+  },
+  {
+    "key": "さようなら",
+    "text": "さようなら",
+    "mode": "一般モード",
+    "seen_count": 1,
+    "confidence": 0.0,
+    "status": "candidate",
+    "first_seen": "2026-10-10T17:56:52",
+    "last_seen": "2026-10-10T17:56:52"
+  },
+  {
+    "key": "おおすごい会話できる",
+    "text": "おおすごい会話できる",
+    "mode": "一般モード",
+    "seen_count": 1,
+    "confidence": 0.0,
+    "status": "candidate",
+    "first_seen": "2026-10-10T17:56:57",
+    "last_seen": "2026-10-10T17:56:57"
+  },
+  {
+    "key": "ｓ",
+    "text": "ｓ",
+    "mode": "web_research",
+    "seen_count": 2,
+    "confidence": 0.0,
+    "status": "candidate",
+    "first_seen": "2026-10-10T18:04:38",
+    "last_seen": "2026-10-10T21:56:03",
+    "answer_candidate": "検索結果を取得できなかったよ。少し言い方を変えて質問してみてね。\n\n質問は学習候補として記録しておくね。",
+    "sources": [],
+    "latest_confidence": 0.28,
+    "latest_sources": [
+      {
+        "title": "S - Wikipedia",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FS&rut=295da36b21768ff6426dff85a22bd9a5e042ec78a9742c2453a6f1d0ad116266",
+        "relevance": 0.0
+      },
+      {
+        "title": "The Letter S | Alphabet A-Z | Jack Hartmann Alphabet Song",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DvniciwSnfH8&rut=bad0766e9bf602448ed809fb06e22f69e386a42e839008d568331f829689a128",
+        "relevance": 0.0
+      },
+      {
+        "title": "S - Simple English Wikipedia, the free encyclopedia",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fsimple.wikipedia.org%2Fwiki%2FS&rut=d5fae0439111899cf307786b9b7ca17c8ba32b0a68ba81873c4470080b7a599c",
+        "relevance": 0.0
+      }
+    ]
+  },
+  {
+    "key": "minecraft1.21.11の最新情報をweb検索して、見つけた情報のタイトルとurlを教えて",
+    "text": "Minecraft 1.21.11 の最新情報をWeb検索して、見つけた情報のタイトルとURLを教えて。",
+    "mode": "web_research",
+    "seen_count": 1,
+    "confidence": 0.547,
+    "status": "candidate",
+    "first_seen": "2026-10-10T22:01:23",
+    "last_seen": "2026-10-10T22:01:23",
+    "answer_candidate": "Web検索で見つかった情報をまとめるね。\n\n・1.21.11は、2025年12月10日（日本時間）にマウント・オブ・メイヘムとしてリリースされたJava Editionのバージョンである[1]。\n  出典: Java Edition 1.21.11 - Minecraft Wiki — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fja.minecraft.wiki%2Fw%2FJava_Edition_1.21.11&rut=c54f31395de3fc5a9751f9d24160d301aafcb79af594d2853ae753bc2b7801c8\n\n・Minecraft Java Edition 1.21.11：現在確認できる情報 公開されている資料を整理すると、 Minecraft Java Edition 1.21.11にはMojang公式のプレリリース版とリリース候補（Release Candidate）が存在 します。ただし、人気サーバーソフトである...\n  出典: Minecraft Java Edition 1.21.11の状況まとめ：サーバー配布とPaper対応はどうなっている？ — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.studioglobal.ai%2Fja%2Fdiscover%2Fanswers%2Fsearch%2D6a134eccc2a2103925f9fe2f&rut=0a82884b398ae14a1e155413509e3a30eb658daadf724846c0073cdbe62bcc96\n\n・25w41a 25w41a は、2025年10月9日にリリースされた Java Edition 1.21.11 に向けた1番目のスナップショットである [1]。\n  出典: Java Edition 1.21.11/開発版 - Minecraft Wiki — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fja.minecraft.wiki%2Fw%2FJava_Edition_1.21.11%2F%25E9%2596%258B%25E7%2599%25BA%25E7%2589%2588&rut=b0ce76c7358737fddcb229c4de939aa4ecf06f4f456d838259e69f0167e9cb9e\n\n※確認できた情報源が限られているため、内容は未確認の候補として扱うよ。",
+    "sources": [
+      {
+        "title": "Java Edition 1.21.11 - Minecraft Wiki",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fja.minecraft.wiki%2Fw%2FJava_Edition_1.21.11&rut=c54f31395de3fc5a9751f9d24160d301aafcb79af594d2853ae753bc2b7801c8",
+        "relevance": 0.381
+      },
+      {
+        "title": "Minecraft Java Edition 1.21.11の状況まとめ：サーバー配布とPaper対応はどうなっている？",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.studioglobal.ai%2Fja%2Fdiscover%2Fanswers%2Fsearch%2D6a134eccc2a2103925f9fe2f&rut=0a82884b398ae14a1e155413509e3a30eb658daadf724846c0073cdbe62bcc96",
+        "relevance": 0.381
+      },
+      {
+        "title": "Java Edition 1.21.11/開発版 - Minecraft Wiki",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fja.minecraft.wiki%2Fw%2FJava_Edition_1.21.11%2F%25E9%2596%258B%25E7%2599%25BA%25E7%2589%2588&rut=b0ce76c7358737fddcb229c4de939aa4ecf06f4f456d838259e69f0167e9cb9e",
+        "relevance": 0.381
+      },
+      {
+        "title": "Minecraft 1.21.11 Pre-Release 1 | Minecraft",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.minecraft.net%2Fja%2Djp%2Farticle%2Fminecraft%2D1%2D21%2D11%2Dpre%2Drelease%2D1&rut=3a64de0a543d3bbaa6cc292b3fe3d8a3bf78aa1dfaccef60fcc280d1e3a6337e",
+        "relevance": 0.381
+      }
+    ]
+  },
+  {
+    "key": "minecraftjavaedition1.21.11の公式リリースノートを探して、変更点を5つにまとめて。公式サイトのurlを優先して",
+    "text": "Minecraft Java Edition 1.21.11の公式リリースノートを探して、変更点を5つにまとめて。公式サイトのURLを優先して",
+    "mode": "web_research",
+    "seen_count": 1,
+    "confidence": 0.605,
+    "status": "candidate",
+    "first_seen": "2026-10-10T22:02:06",
+    "last_seen": "2026-10-10T22:02:06",
+    "answer_candidate": "Web検索で見つかった情報をまとめるね。\n\n・1.21.11は、2025年12月10日（日本時間）にマウント・オブ・メイヘムとしてリリースされたJava Editionのバージョンである[1]。\n  出典: Java Edition 1.21.11 - Minecraft Wiki — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fja.minecraft.wiki%2Fw%2FJava_Edition_1.21.11&rut=c54f31395de3fc5a9751f9d24160d301aafcb79af594d2853ae753bc2b7801c8\n\n・25w41a 25w41a は、2025年10月9日にリリースされた Java Edition 1.21.11 に向けた1番目のスナップショットである [1]。\n  出典: Java Edition 1.21.11/開発版 - Minecraft Wiki — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fja.minecraft.wiki%2Fw%2FJava_Edition_1.21.11%2F%25E9%2596%258B%25E7%2599%25BA%25E7%2589%2588&rut=b0ce76c7358737fddcb229c4de939aa4ecf06f4f456d838259e69f0167e9cb9e\n\n・Minecraft 1.21.11 Nautilus Armor Equippable on the Nautilus and Zombie Nautilus Comes in Copper, Golden, Iron, Diamond and Netherite versions Copper, Iron, Golden, and Diamond Nautilus Armor now have a chance to be found in the Chests for the following Structures: Buried Treasure Ocean Ruins Shipwreck Netherite Nautilus Armor is created by upgrading from Diamond Nautilus Armor using a Smithing ...\n  出典: Minecraft Java Edition 1.21.11 — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.minecraft.net%2Fja%2Djp%2Farticle%2Fminecraft%2Djava%2Dedition%2D1%2D21%2D11&rut=7bbe3e8aceef308435e8c0f724cb8a953748ad17896649f74fefb4b974b73c25\n\n※確認できた情報源が限られているため、内容は未確認の候補として扱うよ。",
+    "sources": [
+      {
+        "title": "Java Edition 1.21.11 - Minecraft Wiki",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fja.minecraft.wiki%2Fw%2FJava_Edition_1.21.11&rut=c54f31395de3fc5a9751f9d24160d301aafcb79af594d2853ae753bc2b7801c8",
+        "relevance": 0.492
+      },
+      {
+        "title": "Java Edition 1.21.11/開発版 - Minecraft Wiki",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fja.minecraft.wiki%2Fw%2FJava_Edition_1.21.11%2F%25E9%2596%258B%25E7%2599%25BA%25E7%2589%2588&rut=b0ce76c7358737fddcb229c4de939aa4ecf06f4f456d838259e69f0167e9cb9e",
+        "relevance": 0.475
+      },
+      {
+        "title": "Minecraft Java Edition 1.21.11",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.minecraft.net%2Fja%2Djp%2Farticle%2Fminecraft%2Djava%2Dedition%2D1%2D21%2D11&rut=7bbe3e8aceef308435e8c0f724cb8a953748ad17896649f74fefb4b974b73c25",
+        "relevance": 0.426
+      },
+      {
+        "title": "Java Edition 1.21.11 - Minecraft Wiki",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fminecraft.wiki%2Fw%2FJava_Edition_1.21.11&rut=f6a0bd708216d8abeb3b23899a15fae53208c5f7373814e700d76060d54935f7",
+        "relevance": 0.426
+      }
+    ]
+  },
+  {
+    "key": "今日マイクラした",
+    "text": "今日マイクラした",
+    "mode": "web_research",
+    "seen_count": 1,
+    "confidence": 0.513,
+    "status": "candidate",
+    "first_seen": "2026-10-10T22:24:18",
+    "last_seen": "2026-10-10T22:24:18",
+    "answer_candidate": "Web検索で見つかった情報をまとめるね。\n\n・マイクラ (マインクラフト)の26.3 (統合版26.50)アップデート情報まとめです。 2026年9月16日配信のまだらな森や廃キャンプ、ポプラの木、クッション、藁のベッドなど追加要素と変更点を掲載しています。\n  出典: 【マイクラ】26.3(統合版26.50)アップデート情報まとめ・ワイル ... — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fgame8.jp%2Fminecraft%2F786539&rut=d799109af3035f368a34584cb3ebf9b8b3d6885ab1a6a5c01281b3faf15b909e\n\n・マイクラアップデート内容をまとめた記事です。 アプデはいつ？ 、新構造物や新モブなどの追加内容についてもまとめています。 マイクラのJava版アプデ情報や統合版アプデ情報などで何が増えるのか、全て知りたい方は是非ご覧ください。\n  出典: 【マイクラ】最新アップデート情報まとめ【統合版 ... — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fgame8.jp%2Fminecraft%2F225385&rut=1e33c0e6d99f2cc904effce1fbd30c6b635949d2e93ab48d8d5d34c27d26b91f\n\n・現実世界での冒険の準備をしましょう! 世界初のマインクラフトのジェットコースター🎢 Escape the Nether (ネザーからの脱出) が 史上初のマインクラフトのホテルとともに Minecraft World (マインクラフトワールド) に登場します🎉 2027年、Chessington World of Adventures ...\n  出典: マインクラフト 日本公式 / Minecraft Japan (@minecraftjapan) / X — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fx.com%2Fminecraftjapan&rut=afb73d242f4b3a4e98f83d4f111489172ebf735342c0d7b7809a2e22d743ca1d\n\n※確認できた情報源が限られているため、内容は未確認の候補として扱うよ。",
+    "sources": [
+      {
+        "title": "【マイクラ】26.3(統合版26.50)アップデート情報まとめ・ワイル ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fgame8.jp%2Fminecraft%2F786539&rut=d799109af3035f368a34584cb3ebf9b8b3d6885ab1a6a5c01281b3faf15b909e",
+        "relevance": 0.375
+      },
+      {
+        "title": "【マイクラ】最新アップデート情報まとめ【統合版 ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fgame8.jp%2Fminecraft%2F225385&rut=1e33c0e6d99f2cc904effce1fbd30c6b635949d2e93ab48d8d5d34c27d26b91f",
+        "relevance": 0.375
+      },
+      {
+        "title": "マインクラフト 日本公式 / Minecraft Japan (@minecraftjapan) / X",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fx.com%2Fminecraftjapan&rut=afb73d242f4b3a4e98f83d4f111489172ebf735342c0d7b7809a2e22d743ca1d",
+        "relevance": 0.25
+      },
+      {
+        "title": "える@最新アプデ/エラー情報 (@eluguide) / X",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fx.com%2Feluguide&rut=717c11171700acd5de6c237bac7bfbba93f52edf6a78a8862c9b27bb4a52a3c4",
+        "relevance": 0.25
+      }
+    ]
+  },
+  {
+    "key": "ゾンビって知ってる",
+    "text": "ゾンビって知ってる？",
+    "mode": "web_research",
+    "seen_count": 1,
+    "confidence": 0.63,
+    "status": "candidate",
+    "first_seen": "2026-10-10T22:24:41",
+    "last_seen": "2026-10-10T22:24:41",
+    "answer_candidate": "Web検索で見つかった情報をまとめるね。\n\n・そこで思い出したのが 前に観ていたゾンビドラマ 「iゾンビ」 Netflixで観ていたのに 続きを観ようと思ったら ある日配信停止になっていて 悲しくなった・・・・。 今日はおもいきって検索してみたら なんと! Amazonで観られると。\n  出典: iゾンビっていうドラマ 知ってる？｜ほんわか＠さつ — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fnote.com%2Fhonwaka_satsu%2Fn%2Fn1b16e74a5738&rut=b3783c97605b7e7947bf9162f1906b30c5212b92bf6f32795d3e79ed400458e9\n\n・あなたはゾンビの種類を知っていますか？ 先日ciatrにて『あなたはゾンビからどこに逃げる？ 安全度別おすすめ隠れ場所【完全保存版】』という記事を公開し、全国民に警鐘を鳴らしました。\n  出典: あなたはゾンビの種類を知ってる？おすすめ映画付きゾンビ ... — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fciatr.jp%2Ftopics%2F123443&rut=f45b2b66754110558b6bfacda36ac23ff9f6dbb4693436f45e14d4d9069e30a3\n\n・映画・ドラマやゲーム等で時より見かける「ゾンビ」という単語がありますよね。 「ゾンビ」のことは何となく知っているという人が多いと思いますが、まだまだ知らないことも…\n  出典: ゾンビとは？ゾンビの特徴や起源まで詳細に解説! - usazombie — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fusazombie.pyontam.com%2Fwhat%2Dis%2Da%2Dzombie%2F&rut=2acb59960355f651f1a31cbe4af845a97d8403ffeb22c41ae00e134a3f531e81\n\n※確認できた情報源が限られているため、内容は未確認の候補として扱うよ。",
+    "sources": [
+      {
+        "title": "iゾンビっていうドラマ 知ってる？｜ほんわか＠さつ",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fnote.com%2Fhonwaka_satsu%2Fn%2Fn1b16e74a5738&rut=b3783c97605b7e7947bf9162f1906b30c5212b92bf6f32795d3e79ed400458e9",
+        "relevance": 0.75
+      },
+      {
+        "title": "あなたはゾンビの種類を知ってる？おすすめ映画付きゾンビ ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fciatr.jp%2Ftopics%2F123443&rut=f45b2b66754110558b6bfacda36ac23ff9f6dbb4693436f45e14d4d9069e30a3",
+        "relevance": 0.625
+      },
+      {
+        "title": "ゾンビとは？ゾンビの特徴や起源まで詳細に解説! - usazombie",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fusazombie.pyontam.com%2Fwhat%2Dis%2Da%2Dzombie%2F&rut=2acb59960355f651f1a31cbe4af845a97d8403ffeb22c41ae00e134a3f531e81",
+        "relevance": 0.5
+      },
+      {
+        "title": "ゾンビってなに？ゾンビの生態や寿命を解説!｜みきちゃんの日記",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fnote.com%2Fsola_enjoy%2Fn%2Fndc26dc4071fa&rut=8fd842393305f464671a57ad1f3b9c359a01c54eb5a230cf605e9a6285a6b2fe",
+        "relevance": 0.5
+      }
+    ]
+  },
+  {
+    "key": "マイクらの",
+    "text": "マイクらの",
+    "mode": "web_research",
+    "seen_count": 1,
+    "confidence": 0.56,
+    "status": "candidate",
+    "first_seen": "2026-10-10T22:24:52",
+    "last_seen": "2026-10-10T22:24:52",
+    "answer_candidate": "Web検索で見つかった情報をまとめるね。\n\n・「クラフターズコロニー」はMinecraft統合版 (be)/Java版の投稿型ワールド配布サイトです。景観マップや脱出マップなどの配布ワールドをはじめテクスチャやアドオン、MODなどの様々な投稿が行えます。\n  出典: クラフターズコロニー -マイクラの配布サイト- — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fminecraft%2Dmcworld.com%2F&rut=57d6d3603ff718942ef54b2f42a7c078aa82f46ed2e6de1355c1b2a1e25e5f26\n\n・マイクラアップデート内容をまとめた記事です。アプデはいつ？、新構造物や新モブなどの追加内容についてもまとめています。マイクラのJava版アプデ情報や統合版アプデ情報などで何が増えるのか、全て知りたい方は是非ご覧ください。\n  出典: 【マイクラ】最新アップデート情報まとめ【統合版マインクラフトswitch】｜ゲームエイト — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fgame8.jp%2Fminecraft%2F225385&rut=1e33c0e6d99f2cc904effce1fbd30c6b635949d2e93ab48d8d5d34c27d26b91f\n\n・マインクラフトの日本公式YouTubeチャンネル、Minecraft Japan です。マイクラ関連のニュースやゲームのアップデート情報など、マインクラフト日本 ...\n  出典: マインクラフト 日本公式 / Minecraft Japan - YouTube — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.youtube.com%2Fminecraftjapan&rut=493b3451d76887c7dab9e063cdc80e350b609cc9ef894e6c877a53ee704f19a4\n\n※確認できた情報源が限られているため、内容は未確認の候補として扱うよ。",
+    "sources": [
+      {
+        "title": "クラフターズコロニー -マイクラの配布サイト-",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fminecraft%2Dmcworld.com%2F&rut=57d6d3603ff718942ef54b2f42a7c078aa82f46ed2e6de1355c1b2a1e25e5f26",
+        "relevance": 0.4
+      },
+      {
+        "title": "【マイクラ】最新アップデート情報まとめ【統合版マインクラフトswitch】｜ゲームエイト",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fgame8.jp%2Fminecraft%2F225385&rut=1e33c0e6d99f2cc904effce1fbd30c6b635949d2e93ab48d8d5d34c27d26b91f",
+        "relevance": 0.4
+      },
+      {
+        "title": "マインクラフト 日本公式 / Minecraft Japan - YouTube",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.youtube.com%2Fminecraftjapan&rut=493b3451d76887c7dab9e063cdc80e350b609cc9ef894e6c877a53ee704f19a4",
+        "relevance": 0.4
+      },
+      {
+        "title": "ひきこもろん",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fhikicomoron.net%2F&rut=eb704373ad7f2a37cc5d7be5d54eb6884ee87f6757697477726a199553905349",
+        "relevance": 0.4
+      }
+    ]
+  },
+  {
+    "key": "よーbro",
+    "text": "よーbro",
+    "mode": "web_research",
+    "seen_count": 1,
+    "confidence": 0.63,
+    "status": "candidate",
+    "first_seen": "2026-10-11T06:31:59",
+    "last_seen": "2026-10-11T06:31:59",
+    "answer_candidate": "Web検索で見つかった情報をまとめるね。\n\n・Share your videos with friends, family, and the world\n  出典: よーbro - YouTube — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUC582JiDdyWVBrKCtXiygPaQ&rut=7dc8adfe04fcbd919330abb2eb612646a0d89661b2795690a5d9e2c8fc1bb7a1\n\n・わっさーぶろーWWW フォロー メッセージ 23フォロー中 27フォロワー 277「いいね」 よーbro 動画 いいね 最新 人気 古い順 コンテンツはありません まだ動画はありません\n  出典: わっさーぶろーWWW (@cuvxna4) | TikTok — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.tiktok.com%2F%40cuvxna4&rut=0a566b68c0fb5dc7a4e094bbdc01ae967664370b205bdd8510162ca1adfcdddf\n\n・個人勢 新人VTuberの蒼井薫です🐧🚬 🚬🍻🎰💕 「「かおるん」」と呼んでね! 🇰🇷 韓 / 🇯🇵 日 バイリンガル成人男子 2026/07/10 START シージを中心に色んなゲームをやる 親 @NekotoBeat ファンアート #かおるん絵 タグ #見ろ ...\n  出典: 新人VTuber 蒼井薫 on X: \"@subtobi_127 よー、bro\" / X — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fx.com%2F3KKaoru0526%2Fstatus%2F2102688385458679934&rut=05a7d6736f9675bb11d322d9be90b8cd0f3ff087070657946e3468881458a73c\n\n※確認できた情報源が限られているため、内容は未確認の候補として扱うよ。",
+    "sources": [
+      {
+        "title": "よーbro - YouTube",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUC582JiDdyWVBrKCtXiygPaQ&rut=7dc8adfe04fcbd919330abb2eb612646a0d89661b2795690a5d9e2c8fc1bb7a1",
+        "relevance": 1.0
+      },
+      {
+        "title": "わっさーぶろーWWW (@cuvxna4) | TikTok",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.tiktok.com%2F%40cuvxna4&rut=0a566b68c0fb5dc7a4e094bbdc01ae967664370b205bdd8510162ca1adfcdddf",
+        "relevance": 1.0
+      },
+      {
+        "title": "新人VTuber 蒼井薫 on X: \"@subtobi_127 よー、bro\" / X",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fx.com%2F3KKaoru0526%2Fstatus%2F2102688385458679934&rut=05a7d6736f9675bb11d322d9be90b8cd0f3ff087070657946e3468881458a73c",
+        "relevance": 1.0
+      },
+      {
+        "title": "𝗡𝗼.𝟯 on X: \"早くお家帰って見たいよー!!\"",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fx.com%2Fhey_bro_No3%2Fstatus%2F2105616809676419191&rut=31118dcb12b3c0989748abf45ad1fb4fd811b18cccabfe245efc50f204f5431b",
+        "relevance": 0.5
+      }
+    ]
+  },
+  {
+    "key": "マイクラやってる",
+    "text": "マイクラやってる？",
+    "mode": "web_research",
+    "seen_count": 1,
+    "confidence": 0.63,
+    "status": "candidate",
+    "first_seen": "2026-10-11T06:32:35",
+    "last_seen": "2026-10-11T06:32:35",
+    "answer_candidate": "Web検索で見つかった情報をまとめるね。\n\n・マイクラのゲーム実況をしてます チャンネル登録お願いします🍀 Twitter https://twitter.com/hqr_ulu Instagram https://www.instagram.com/hqr_ulu お仕事等のご連絡 ...\n  出典: どんなゲームやってる？ #マイクラ #はるる - YouTube — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DcPDdfLEKhVc&rut=122a6aeec21588008cc91b877aa1ce3248683046f9871587a22331dcc9c43346\n\n・この記事は「マイクラ実況者 一覧」を探している方向けのまとめページです ニコニコ黎明期〜2026年現在のYouTube/配信まで、ざっくり時系列で整理します ※実況スタイル（ゆっくり/生声/配信/ショート）で好みが分かれるので、タイプ別にも分けてます ...\n  出典: 【マイクラ】Minecraft実況者一覧!｜ニコニコ動画からYouTube ... — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fyuzukaki1000.jp%2Fentry%2F2026%2F01%2F18%2F233348&rut=da943c6ac330f82f9f72a84e215c2b2ec9023c22cc003596f55cced200f41835\n\n・今回は、そんなマイクラ実況者をランキング形式（登録者数順※）でご紹介します! それぞれの実況者のプレイスタイルや魅力もご紹介しているので、是非実況者探しの参考にしてくださいね♪\n  出典: 【2025年最新】マイクラ実況者人気ランキング!上手い人・古参 ... — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fmo%2Dla.jp%2Ftrend%2F63823%2F&rut=52e1ae848ee3ae5b985beb63584a02f8a07f069cbc657e92f8215495156e4a5c\n\n※確認できた情報源が限られているため、内容は未確認の候補として扱うよ。",
+    "sources": [
+      {
+        "title": "どんなゲームやってる？ #マイクラ #はるる - YouTube",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DcPDdfLEKhVc&rut=122a6aeec21588008cc91b877aa1ce3248683046f9871587a22331dcc9c43346",
+        "relevance": 0.75
+      },
+      {
+        "title": "【マイクラ】Minecraft実況者一覧!｜ニコニコ動画からYouTube ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fyuzukaki1000.jp%2Fentry%2F2026%2F01%2F18%2F233348&rut=da943c6ac330f82f9f72a84e215c2b2ec9023c22cc003596f55cced200f41835",
+        "relevance": 0.375
+      },
+      {
+        "title": "【2025年最新】マイクラ実況者人気ランキング!上手い人・古参 ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fmo%2Dla.jp%2Ftrend%2F63823%2F&rut=52e1ae848ee3ae5b985beb63584a02f8a07f069cbc657e92f8215495156e4a5c",
+        "relevance": 0.375
+      },
+      {
+        "title": "マイクラ実況者おすすめ10選【2026年最新】 - デジタネ",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fdigitane.jp%2Fonline%2Ftopics%2Fminecraft%2F29591%2F&rut=3e6ab00d4e5b6ec4b496b1b8bb264b2635a10e98db850f43e946948a67eabb75",
+        "relevance": 0.375
+      }
+    ]
+  },
+  {
+    "key": "まいくらやってる？っていうのは魔いくらやってるかを答えてほしいっていう意味",
+    "text": "まいくらやってる？っていうのは魔いくらやってるかを答えてほしいっていう意味",
+    "mode": "web_research",
+    "seen_count": 1,
+    "confidence": 0.388,
+    "status": "candidate",
+    "first_seen": "2026-10-11T06:35:46",
+    "last_seen": "2026-10-11T06:35:46",
+    "answer_candidate": "Web検索で見つかった情報をまとめるね。\n\n・2009年 5月17日のAlpha版公開を経て、2011年11月18日に PC 向けに正式リリースされた。 その後、 モバイルデバイス や各種 家庭用ゲーム機 を含む多数のプラットフォームに 移植 されている。 日本 国内では「マイクラ」と略されることが多い [6][7][8]。\n  出典: まいくらの意味や使い方 わかりやすく解説 Weblio辞書 — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.weblio.jp%2Fcontent%2F%25E3%2581%25BE%25E3%2581%2584%25E3%2581%258F%25E3%2582%2589&rut=c035b8487204a536bc7cfe2e00f3339b96eee76997dbdde431bb9333d5559b15\n\n・Results for \"#マイクラやってるかい\" on X (Twitter). Find the latest posts, discussions, and updates about #マイクラやってるかい. 14 results found.\n  出典: \"#マイクラやってるかい\" - Results on X | Live Posts & Updates — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fx.com%2Fhashtag%2F%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%25E3%2583%25A9%25E3%2582%2584%25E3%2581%25A3%25E3%2581%25A6%25E3%2582%258B%25E3%2581%258B%25E3%2581%2584&rut=ce1d7d8fd2d1b1675898ed4c5cd03b065be6bf027e4e078f7a64420b955a7215\n\n・回答は「創造力を伸ばせるゲーム」「ボマーに気をつけろ」「人生が詰まってる」などユーモア豊かで多様。 こうした盛り上がりは、マイクラの無限の遊び方とコミュニティの絆を象徴し、新規ファンも引き込むきっかけになっている。\n  出典: マイクラ日本公式がファンに一言説明呼びかけ ユーモア回答殺到 — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fx.com%2Fi%2Ftrending%2F2042905815292563801&rut=ece844d3f025caa54fda6b113ec5510b274b5832d1b702460b1b13037cacefae\n\n※確認できた情報源が限られているため、内容は未確認の候補として扱うよ。",
+    "sources": [
+      {
+        "title": "まいくらの意味や使い方 わかりやすく解説 Weblio辞書",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.weblio.jp%2Fcontent%2F%25E3%2581%25BE%25E3%2581%2584%25E3%2581%258F%25E3%2582%2589&rut=c035b8487204a536bc7cfe2e00f3339b96eee76997dbdde431bb9333d5559b15",
+        "relevance": 0.192
+      },
+      {
+        "title": "\"#マイクラやってるかい\" - Results on X | Live Posts & Updates",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fx.com%2Fhashtag%2F%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%25E3%2583%25A9%25E3%2582%2584%25E3%2581%25A3%25E3%2581%25A6%25E3%2582%258B%25E3%2581%258B%25E3%2581%2584&rut=ce1d7d8fd2d1b1675898ed4c5cd03b065be6bf027e4e078f7a64420b955a7215",
+        "relevance": 0.154
+      },
+      {
+        "title": "マイクラ日本公式がファンに一言説明呼びかけ ユーモア回答殺到",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fx.com%2Fi%2Ftrending%2F2042905815292563801&rut=ece844d3f025caa54fda6b113ec5510b274b5832d1b702460b1b13037cacefae",
+        "relevance": 0.115
+      }
+    ]
+  },
+  {
+    "key": "今日はマイクラやってたよ",
+    "text": "今日はマイクラやってたよ",
+    "mode": "web_research",
+    "seen_count": 1,
+    "confidence": 0.63,
+    "status": "candidate",
+    "first_seen": "2026-10-11T11:43:08",
+    "last_seen": "2026-10-11T11:43:08",
+    "answer_candidate": "Web検索で見つかった情報をまとめるね。\n\n・勉強せなあかんのはわかってる。 でも今日は、友達とマイクラのハードコアワールドで一日中遊んでしもた。 学生の夏休みなんて、こんな日があってもええよな。 正直、最初は「ちょっとだけ」のつもりやってん。\n  出典: 堕落高校生、今日はマイクラに逃げました — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fnote.com%2Frapid_violet339%2Fn%2Fnb1871dc8f2ac&rut=8efbf8b2ce75ddc27c6e4d9d8590bbaec2c7d482636eb79f099283b8600ba075\n\n・sunsetresortにも参加してくれた有志のみなさまと🔥ルール🔥1．1人でも死んだら即ワイプ2．目標はエンドラ討伐3．時間になったらそこまで ...\n  出典: 【#マインクラフト 】おそらく今日でラスト!!やってやるぜ ... — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DqB2nh88Nb_Y&rut=a8eb5a94e964212e5e08124270e559b4c3db714830354006c36ed38391f290e5\n\n・【マイクラ】今日は壁を作る朝活マイクラ! !! 【早乙女ベリー/にじさんじ】 早乙女 ベリー / Saotome Berry【にじさんじ】 313K subscribers 931\n  出典: 【マイクラ】今日は壁を作る朝活マイクラ!!!【早乙女 ... — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DWBbBvhmFqZY&rut=c604e8d9d02e5bba114826994bd6f242aa83bc6e8bf9c1a8bdc6209fbd74466d\n\n※確認できた情報源が限られているため、内容は未確認の候補として扱うよ。",
+    "sources": [
+      {
+        "title": "堕落高校生、今日はマイクラに逃げました",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fnote.com%2Frapid_violet339%2Fn%2Fnb1871dc8f2ac&rut=8efbf8b2ce75ddc27c6e4d9d8590bbaec2c7d482636eb79f099283b8600ba075",
+        "relevance": 0.667
+      },
+      {
+        "title": "【#マインクラフト 】おそらく今日でラスト!!やってやるぜ ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DqB2nh88Nb_Y&rut=a8eb5a94e964212e5e08124270e559b4c3db714830354006c36ed38391f290e5",
+        "relevance": 0.417
+      },
+      {
+        "title": "【マイクラ】今日は壁を作る朝活マイクラ!!!【早乙女 ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DWBbBvhmFqZY&rut=c604e8d9d02e5bba114826994bd6f242aa83bc6e8bf9c1a8bdc6209fbd74466d",
+        "relevance": 0.417
+      },
+      {
+        "title": "角巻わため ホロライブ on X: \"マイクラ肝試しすごすぎる ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fx.com%2Ftsunomakiwatame%2Fstatus%2F2102097516556845076&rut=31a422616f5a59218e5423b5bf4cde1ef044de0773aae7964a53954442ec2f77",
+        "relevance": 0.417
+      }
+    ]
+  },
+  {
+    "key": "今日マイクラやってた",
+    "text": "今日マイクラやってた",
+    "mode": "web_research",
+    "seen_count": 2,
+    "confidence": 0.63,
+    "status": "candidate",
+    "first_seen": "2026-10-11T11:44:21",
+    "last_seen": "2026-10-11T11:48:19",
+    "answer_candidate": "Web検索で見つかった情報をまとめるね。\n\n・sunsetresortにも参加してくれた有志のみなさまと🔥ルール🔥1．1人でも死んだら即ワイプ2．目標はエンドラ討伐3．時間になったらそこまで ...\n  出典: 【#マインクラフト 】おそらく今日でラスト!!やってやるぜ ... — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DqB2nh88Nb_Y&rut=a8eb5a94e964212e5e08124270e559b4c3db714830354006c36ed38391f290e5\n\n・いろんな建物立てていきたい! ファンサーバー♡┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈♡みんなの夢にお邪魔します♪人間のことを知るために人間界にやってきたナイトメアVTuberの蝕夢 夜薇 (しょくむ やみ)だよ🥀--------------------...\n  出典: マイクラ動画まとめch | マインクラフトに関する動画まとめ ... — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fminecraft.oyakudati%2Dmatome.com%2F&rut=0b855bf294bb49bbf8caf6b47ad6fd0df42a58092912d069dc5688e87425b924\n\n・癒しのゲーム語りマイクラも気になる…マイクラ、こどもたちがかなりやってます。 やろうと思ってソフトを買ったら長男に持っていかれました元々、レゴが好きで、色々買っていました。 一時期ハマり過ぎて、お金のある限り限定品を買い漁っていました。\n  出典: マイクラ実況の新着記事｜アメーバブログ（アメブロ） — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fblogtag.ameba.jp%2Fnews%2F%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%25E3%2583%25A9%25E5%25AE%259F%25E6%25B3%2581&rut=4b93d398f81e399b4d8171ea0783e6c6b352f38cab9a24f16895e04c78af8683\n\n※確認できた情報源が限られているため、内容は未確認の候補として扱うよ。",
+    "sources": [
+      {
+        "title": "【#マインクラフト 】おそらく今日でラスト!!やってやるぜ ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DqB2nh88Nb_Y&rut=a8eb5a94e964212e5e08124270e559b4c3db714830354006c36ed38391f290e5",
+        "relevance": 0.5
+      },
+      {
+        "title": "マイクラ動画まとめch | マインクラフトに関する動画まとめ ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fminecraft.oyakudati%2Dmatome.com%2F&rut=0b855bf294bb49bbf8caf6b47ad6fd0df42a58092912d069dc5688e87425b924",
+        "relevance": 0.5
+      },
+      {
+        "title": "マイクラ実況の新着記事｜アメーバブログ（アメブロ）",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fblogtag.ameba.jp%2Fnews%2F%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%25E3%2583%25A9%25E5%25AE%259F%25E6%25B3%2581&rut=4b93d398f81e399b4d8171ea0783e6c6b352f38cab9a24f16895e04c78af8683",
+        "relevance": 0.5
+      },
+      {
+        "title": "【マイクラ】今日のマイクラまずは思い出すところから - YouTube",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DcDPLP2weBn8&rut=c580b35ea049ab24e1e00a6fbd7cc8cba1b14993aee166ae5cfbfac2a5ed375b",
+        "relevance": 0.4
+      }
+    ],
+    "latest_confidence": 0.56,
+    "latest_sources": [
+      {
+        "title": "マイクラ動画まとめch | マインクラフトに関する動画まとめ ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fminecraft.oyakudati%2Dmatome.com%2F&rut=0b855bf294bb49bbf8caf6b47ad6fd0df42a58092912d069dc5688e87425b924",
+        "relevance": 0.5
+      },
+      {
+        "title": "【マイクラ】今日のマイクラまずは思い出すところから - YouTube",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DcDPLP2weBn8&rut=c580b35ea049ab24e1e00a6fbd7cc8cba1b14993aee166ae5cfbfac2a5ed375b",
+        "relevance": 0.4
+      },
+      {
+        "title": "「＃マイクラ」のX（旧Twitter）検索結果 - Yahoo!リアルタイム検索",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fsearch.yahoo.co.jp%2Frealtime%2Fsearch%2F%25EF%25BC%2583%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%25E3%2583%25A9%2F&rut=026238bab594333c7debf18a99c7f5cbc773499b26ea378ceb289d4837c678f0",
+        "relevance": 0.3
+      },
+      {
+        "title": "【マイクラ】最新アップデート情報まとめ【統合版 ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fgame8.jp%2Fminecraft%2F225385&rut=5b3d8d0a897376e45cb13c79c87efc7aa50f0f173d4b829df1c7e655cbd0747f",
+        "relevance": 0.3
+      }
+    ]
+  },
+  {
+    "key": "マイクラってやってる",
+    "text": "マイクラってやってる？",
+    "mode": "web_research",
+    "seen_count": 1,
+    "confidence": 0.63,
+    "status": "candidate",
+    "first_seen": "2026-10-11T11:44:40",
+    "last_seen": "2026-10-11T11:44:40",
+    "answer_candidate": "Web検索で見つかった情報をまとめるね。\n\n・マイクラってそもそも何？ マイクラは「Minecraft（マインクラフト）」というゲームの愛称です。 すべてが四角いブロックでできた世界で、自由に冒険やものづくりを楽しめる、そして勉強もできる、世界で一番売れているゲームです!\n  出典: マイクラってそもそもなに？どんなことができる？ ｜マイクラ ... — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fnote.com%2Fyuru_chuzai%2Fn%2Fn24b617a492e0&rut=337cebabc6fcc3a9285c29985097b09dd5bd1b04177f6b728b342f7407911f5c\n\n・マイクラって何？ 子どもたちに大人気のMinecraft（マインクラフト）について、どんなゲームなのか、何をして遊ぶのか、サバイバルとクリエイティブの違い、子どもがハマる理由などを親世代にもわかりやすく紹介します。\n  出典: マイクラって何？子どもがハマる理由を親目線でわかりやすく ... — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fsehmy5.com%2Fminecraft%2Dwhat%2F&rut=59a4bbf56500185bb1574347e5142640f5847956202ab59a426eabea5a4cee87\n\n・マイクラは一口で言うと、 四角のブロックが集まって成り立つ世界を自由に冒険するゲーム です。 ドットのようなややレトロな見た目から、初めて目にした時の印象として「今の時代にこんなにシンプルなゲーム…？ 」と不思議に感じる人もいるかもしれません。 今の高度な技術においては、テレビゲームのワンシーンでも実写なのではないかと目を疑うほど綺麗なグラフィックが楽しめるゲームが多く存在します。 それなのに、なぜ四角いブロックだけで作られた世界のマイクラがここまで人気なのでしょうか？ 見た目こそかなりシンプルなマイクラですが、このゲームでできることは無限大といっていいほどにたくさんあります。\n  出典: 【マイクラ】マイクラとは？歴史・遊び方・プログラミング ... — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fgame.conoha.jp%2Fmedia%2Fmine%2Dsemi%2Ftry%2Dminecraft%2D1%2F&rut=02c420b09501cb2e135364d75f8f449bd9bf2d4e532865830f87d56d18ef137c\n\n※確認できた情報源が限られているため、内容は未確認の候補として扱うよ。",
+    "sources": [
+      {
+        "title": "マイクラってそもそもなに？どんなことができる？ ｜マイクラ ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fnote.com%2Fyuru_chuzai%2Fn%2Fn24b617a492e0&rut=337cebabc6fcc3a9285c29985097b09dd5bd1b04177f6b728b342f7407911f5c",
+        "relevance": 0.556
+      },
+      {
+        "title": "マイクラって何？子どもがハマる理由を親目線でわかりやすく ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fsehmy5.com%2Fminecraft%2Dwhat%2F&rut=59a4bbf56500185bb1574347e5142640f5847956202ab59a426eabea5a4cee87",
+        "relevance": 0.556
+      },
+      {
+        "title": "【マイクラ】マイクラとは？歴史・遊び方・プログラミング ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fgame.conoha.jp%2Fmedia%2Fmine%2Dsemi%2Ftry%2Dminecraft%2D1%2F&rut=02c420b09501cb2e135364d75f8f449bd9bf2d4e532865830f87d56d18ef137c",
+        "relevance": 0.444
+      },
+      {
+        "title": "マインクラフト (マイクラ)とはどんなゲーム？何ができるのか ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fcoeteco.jp%2Farticles%2F10403&rut=6e9f493ae8cb4a91dbe71b2a1f15bdf4072f385c35895593ea8aaff7e62719c7",
+        "relevance": 0.333
+      }
+    ]
+  },
+  {
+    "key": "マイクらの最新情報を検索",
+    "text": "マイクらの最新情報を検索",
+    "mode": "web_research",
+    "seen_count": 1,
+    "confidence": 0.572,
+    "status": "candidate",
+    "first_seen": "2026-10-11T11:45:03",
+    "last_seen": "2026-10-11T11:45:03",
+    "answer_candidate": "Web検索で見つかった情報をまとめるね。\n\n・※本ブログの記事は、筆者がマインクラフト（Java版・統合版）をプレイして検証した内容、および公式仕様をもとに執筆しています。 なるべく最新の情報提供に努めておりますが、バージョンの違いにより挙動が異なる場合があります。\n  出典: マイクラ攻略ログ | マインクラフトの攻略や最新情報をお届け — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fgame%2Dknowledge.hiro%2Dgame1414.com%2F&rut=b13f896f54caabe7e194e6b63fd81ca520bc607b05acc729225196928696aace\n\n・マインクラフトの最新ニュースやアップデート情報、攻略情報、建築、シード値、ネタなどをまとめたサイトです。\n  出典: マイクラ速報 — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fminecraft%2Dnews.jp%2F&rut=caf6c73df3e5b4e721aef455928dbe73edfee6c170b5a3804c8f57a46d95ad7c\n\n・マイクラアップデート内容をまとめた記事です。アプデはいつ？、新構造物や新モブなどの追加内容についてもまとめています。マイクラのJava版アプデ情報や統合版アプデ情報などで何が増えるのか、全て知りたい方は是非ご覧ください。\n  出典: 【マイクラ】最新アップデート情報まとめ【統合版 ... — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fgame8.jp%2Fminecraft%2F225385&rut=5b3d8d0a897376e45cb13c79c87efc7aa50f0f173d4b829df1c7e655cbd0747f\n\n※確認できた情報源が限られているため、内容は未確認の候補として扱うよ。",
+    "sources": [
+      {
+        "title": "マイクラ攻略ログ | マインクラフトの攻略や最新情報をお届け",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fgame%2Dknowledge.hiro%2Dgame1414.com%2F&rut=b13f896f54caabe7e194e6b63fd81ca520bc607b05acc729225196928696aace",
+        "relevance": 0.5
+      },
+      {
+        "title": "マイクラ速報",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fminecraft%2Dnews.jp%2F&rut=caf6c73df3e5b4e721aef455928dbe73edfee6c170b5a3804c8f57a46d95ad7c",
+        "relevance": 0.417
+      },
+      {
+        "title": "【マイクラ】最新アップデート情報まとめ【統合版 ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fgame8.jp%2Fminecraft%2F225385&rut=5b3d8d0a897376e45cb13c79c87efc7aa50f0f173d4b829df1c7e655cbd0747f",
+        "relevance": 0.333
+      },
+      {
+        "title": "【マイクラ】26.52（1.26.52）修正アップデートが配信!修正され ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Ferusuika.com%2Fbedrock%2D26%2D52%2F&rut=9b5a6ba0d55761e8a50978d5d0a43fbb484a0a67422bf6ebe5d55e990b044a56",
+        "relevance": 0.333
+      }
+    ]
+  },
+  {
+    "key": "最近ゲームするのが楽しいんだよね",
+    "text": "最近ゲームするのが楽しいんだよね",
+    "mode": "web_research",
+    "seen_count": 1,
+    "confidence": 0.484,
+    "status": "candidate",
+    "first_seen": "2026-10-11T11:48:37",
+    "last_seen": "2026-10-11T11:48:37",
+    "answer_candidate": "Web検索で見つかった情報をまとめるね。\n\n・そこで今回は、 「ひよこのゲーム部屋」で実際にプレイした作品 の中から、2026年9月におすすめしたいスマホゲームを5本厳選しました! ドラゴンと冒険するMMORPGから爽快アクション、定番バトルロイヤル、恋愛アドベンチャー、宇宙ストラテジーまで、遊び方が大きく違う作品をそろえています。 ランキングは知名度だけで決めるのではなく、ゲームとしての個性、今から始めやすいか、遊び方の分かりやすさ、長く楽しみやすいかを含めて総合的に選びました。 さらに記事後半では、ゲーム以外の番外編として ライブ配信アプリ『mikke LIVE』 も紹介します。 「今日はゲームを遊びたい」「推しを見つけて交流したい」など、その日の気分に合わせてチェックしてみてくださいね!\n  出典: 【2026年9月最新】面白いスマホゲームおすすめランキング5選 ... — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fhiyokogame.com%2Franking%2F&rut=4bb754388e4a910df4d49c273e069ba0f737b490beb72d3df86cd649f21afa34\n\n・最近遊んだゲームの感想です。 最近といいつつ2025年の分もあります。 内容については核心的な部分のネタバレはありませんが、触れてはいるので、目次にあるタイトルのゲームについてちょっとでも情報を入れたくないという方は回れ右して ...\n  出典: 最近游んだゲームの感想（2026年5月） — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fnote.com%2Fmikouri%2Fn%2Fn71b67d61eb42&rut=b6287c89b392b8e7bfb57e4437fdb130c9f64ade16f3dbafef48ddc281c52157\n\n・そんな今流行りのゲームアプリで今おすすめ なのは「1位 Pokémon TCG Pocket ・2位 超自然スクワッド ・3位 プロ野球スピリッツA」です。 最近リリースされたものから、昔から流行っているスマホゲームで迷ったらプレイして欲しい作品 です。\n  出典: 今流行りのゲームアプリおすすめランキング52選【2026最新】 — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fsmartlog.jp%2F294314&rut=09f2d070afaded6e95170ea1d039071ad31e8ed10953d23e07e814d791d72a79\n\n※確認できた情報源が限られているため、内容は未確認の候補として扱うよ。",
+    "sources": [
+      {
+        "title": "【2026年9月最新】面白いスマホゲームおすすめランキング5選 ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fhiyokogame.com%2Franking%2F&rut=4bb754388e4a910df4d49c273e069ba0f737b490beb72d3df86cd649f21afa34",
+        "relevance": 0.312
+      },
+      {
+        "title": "最近游んだゲームの感想（2026年5月）",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fnote.com%2Fmikouri%2Fn%2Fn71b67d61eb42&rut=b6287c89b392b8e7bfb57e4437fdb130c9f64ade16f3dbafef48ddc281c52157",
+        "relevance": 0.312
+      },
+      {
+        "title": "今流行りのゲームアプリおすすめランキング52選【2026最新】",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fsmartlog.jp%2F294314&rut=09f2d070afaded6e95170ea1d039071ad31e8ed10953d23e07e814d791d72a79",
+        "relevance": 0.25
+      },
+      {
+        "title": "最近クリアしたゲーム10本を雑に紹介する記事（2026年9月編）",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fnote.com%2Fsupersasahara%2Fn%2Fn129683d5f305&rut=95d00a715148ccb7cf1692f2ed7ae0d972cc74bd6b5ceb8441410ec1a1d07203",
+        "relevance": 0.25
+      }
+    ]
+  },
+  {
+    "key": "今日はちょっと疲れたは",
+    "text": "今日はちょっと疲れたは",
+    "mode": "web_research",
+    "seen_count": 1,
+    "confidence": 0.63,
+    "status": "candidate",
+    "first_seen": "2026-10-11T11:48:54",
+    "last_seen": "2026-10-11T11:48:54",
+    "answer_candidate": "Web検索で見つかった情報をまとめるね。\n\n・でも、ちょっと疲れてくると時計ばっかり見ちゃうんだよね……。 そして待ちに待ったお昼休み♡ 今日はコンビニで甘いものを買っちゃいました🍰 「頑張ってるんだから、これくらいいいよね？ 」 って、自分に言い訳しながら食べました。\n  出典: 今日はちょっとだけ疲れた日。｜白石ひより - note（ノート） — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fnote.com%2Fhiyori_studio%2Fn%2Fn3d02f3a2224d&rut=86a7b8f22b07cc70dc32d7dc502a5e0c86e33a61f159cd5d5cd5ec9e3de145c5\n\n・【ネイティブが回答】「今日はちょっと疲れたよ。 」 は \"英語（アメリカ）\" でなんて言うの？ 質問に5件の回答が集まっています! Hinativeでは\"英語（アメリカ）\"や外国語の勉強で気になったことを、ネイティブスピーカーに簡単に質問できます。\n  出典: 【今日はちょっと疲れたよ。】 は 英語 (アメリカ) で何と言い ... — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fja.hinative.com%2Fquestions%2F15419560&rut=ccd438679900d92a55da74d5b5e9537ff6e14c0ad44c0a54b17076f93a55dc90\n\n・#心をほどく夜 #心をほどく夜ラジオ #Shorts #今日ちょっと疲れたあなたへ #疲れた夜に #寝る前に聴きたい #寄り添う言葉 #安心する言葉 #癒し …...more\n  出典: 今日ちょっと疲れた君へ #癒し #悩み #睡眠 #癒し #心 #夜 ... — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.youtube.com%2Fshorts%2FWQDodvzzfFc&rut=35149ec65b224d704de1809164c09fb66b2c6f9bfb0341c7a87bb3ceca750a34\n\n※確認できた情報源が限られているため、内容は未確認の候補として扱うよ。",
+    "sources": [
+      {
+        "title": "今日はちょっとだけ疲れた日。｜白石ひより - note（ノート）",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fnote.com%2Fhiyori_studio%2Fn%2Fn3d02f3a2224d&rut=86a7b8f22b07cc70dc32d7dc502a5e0c86e33a61f159cd5d5cd5ec9e3de145c5",
+        "relevance": 0.818
+      },
+      {
+        "title": "【今日はちょっと疲れたよ。】 は 英語 (アメリカ) で何と言い ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fja.hinative.com%2Fquestions%2F15419560&rut=ccd438679900d92a55da74d5b5e9537ff6e14c0ad44c0a54b17076f93a55dc90",
+        "relevance": 0.818
+      },
+      {
+        "title": "今日ちょっと疲れた君へ #癒し #悩み #睡眠 #癒し #心 #夜 ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.youtube.com%2Fshorts%2FWQDodvzzfFc&rut=35149ec65b224d704de1809164c09fb66b2c6f9bfb0341c7a87bb3ceca750a34",
+        "relevance": 0.636
+      },
+      {
+        "title": "【今日の\"ちょっと疲れた\"を軽くする言葉】｜岩槻まなみ 研修講師",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fnote.com%2Fiwatsukimanami%2Fn%2Fn82409099c24d&rut=aaf10db75dad8a81462830bf7a6434b0181cca0a81d1b4679324a718fb9a8f81",
+        "relevance": 0.545
+      }
+    ]
+  },
+  {
+    "key": "マイクラで建築するの好き",
+    "text": "マイクラで建築するの好き？",
+    "mode": "web_research",
+    "seen_count": 1,
+    "confidence": 0.591,
+    "status": "candidate",
+    "first_seen": "2026-10-11T11:49:10",
+    "last_seen": "2026-10-11T11:49:10",
+    "answer_candidate": "Web検索で見つかった情報をまとめるね。\n\n・本記事では「マイクラではどんな建築が作れる？ 」「おしゃれな建築アイデアは？ 」という疑問を解決します。 本記事では建築物を一覧で紹介しているので、おしゃれな建築アイデアを知りたい方は必見です!\n  出典: 【マイクラ】建築物25選!おしゃれな建築アイデア集【統合版 ... — https://duckduckgo.com/l/?uddg=https%3A%2F%2Ftech%2Dteacher.jp%2Fkids%2Dblog%2Fminecraft%2Darchitecture%2F&rut=3c9f1ee153486565f08485e57915d2b9f714cd4e576cb9fb5f54d6ae1ffcf6e5\n\n・この記事では、建築を始める前に知っておきたいことから、「豆腐建築」から脱却する基本テクニック、家・城以外のジャンル別アイデア、便利なツール・コマンド、上達のための練習方法まで、まとめて解説します。\n  出典: 【マイクラ】建築初心者が知っておきたい基本とテクニック集 ... — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fhimeb.com%2Fminecraft%2Darchitecture%2Dbeginner%2F&rut=a940cc93987a887fa3803bb88572ffd538ffa69e53868386a92a6c73a0c6c2ff\n\n・建築がなかなか上達しない人の特徴のひとつとして、 「オリジナルを意識しすぎている」というものが挙げられると思います。 「オリジナルを意識することはだめなの？ じゃあ、他の人の建築をパクれば良いの？ 」 と思う方がいるかも知れません。\n  出典: 【重要】建築のすべてを教えます。｜Wien (マイクラ建築) — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fnote.com%2Fwien_mcbuild%2Fn%2Fn84d4826d918e&rut=3982f861f61e21add24c1fe4b7514e6063f15b215dd298eaa6438ffc1ed948fb\n\n※確認できた情報源が限られているため、内容は未確認の候補として扱うよ。",
+    "sources": [
+      {
+        "title": "【マイクラ】建築物25選!おしゃれな建築アイデア集【統合版 ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Ftech%2Dteacher.jp%2Fkids%2Dblog%2Fminecraft%2Darchitecture%2F&rut=3c9f1ee153486565f08485e57915d2b9f714cd4e576cb9fb5f54d6ae1ffcf6e5",
+        "relevance": 0.5
+      },
+      {
+        "title": "【マイクラ】建築初心者が知っておきたい基本とテクニック集 ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fhimeb.com%2Fminecraft%2Darchitecture%2Dbeginner%2F&rut=a940cc93987a887fa3803bb88572ffd538ffa69e53868386a92a6c73a0c6c2ff",
+        "relevance": 0.417
+      },
+      {
+        "title": "【重要】建築のすべてを教えます。｜Wien (マイクラ建築)",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fnote.com%2Fwien_mcbuild%2Fn%2Fn84d4826d918e&rut=3982f861f61e21add24c1fe4b7514e6063f15b215dd298eaa6438ffc1ed948fb",
+        "relevance": 0.417
+      },
+      {
+        "title": "建築のマイクラ - YouTube",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.youtube.com%2F%40%25E5%25BB%25BA%25E7%25AF%2589%25E3%2581%25AE%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25AF%25E3%2583%25A9&rut=68cc622df5878020853919635c91fa210bb6469468f185213a4f6e9915755f92",
+        "relevance": 0.417
+      }
+    ]
+  },
+  {
+    "key": "俺は大きい家を作るのが好きだよ",
+    "text": "俺は大きい家を作るのが好きだよ",
+    "mode": "web_research",
+    "seen_count": 1,
+    "confidence": 0.498,
+    "status": "candidate",
+    "first_seen": "2026-10-11T11:49:36",
+    "last_seen": "2026-10-11T11:49:36",
+    "answer_candidate": "Web検索で見つかった情報をまとめるね。\n\n・看守だらけの刑務所を本気で脱獄しようとした結果! ？ 【まいくら・マインクラフト】 バックルーム NOOB vs PRO: SAFEST SECURITY TO PROTECT FAMILY!!\n  出典: 【まいぜんシスターズ】大きい家を作るぞ!!【Part11 ... — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DBa9G6WBBCnE&rut=57a9a67859130f18f0f4ca946d8a966d923986e957d58689e8955cf52303c155\n\n・私なら、じゃあ〇君はもっと大きな家が買えるように頑張らないといけないね。 そのためにはどうしたらいいと思う？ と聞きますよ。 他の家をうらやましく思うことは誰にでもありうることですが、それを口に出して親に言うのはちょっと幼いと思いますね。 せっかく家を頑張って建てたのにパパもママも悲しいと伝えたほうがいいです。 そういうことを言うと相手が傷つく場合があると教えたほうがいいからです。...\n  出典: 大きい家を羨ましがる息子・・・ | 生活・身近な話題 | 発言小町 — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fkomachi.yomiuri.co.jp%2Ftopics%2Fid%2F1030745%2F&rut=d0f93dd7a9f90c396640ce9861b840d11f33f96974c08a195bfdc0bd098a42a2\n\n・「家は広いほうがいいと思っていたけど、実際どうなの？ 」「広すぎて後悔することはある？ 」「住みやすい部屋の大きさを知りたい! 」 家を建てるときはできるだけ広くしたいと考える方も多いかもしれませんが、実は後悔することもあります。\n  出典: 【衝撃】広すぎる家を建てると後悔する5つの理由!大きい家の ... — https://duckduckgo.com/l/?uddg=https%3A%2F%2Faki%2Dno%2Diezukuri.co.jp%2Ftoowidehouse%2Dregret%2F&rut=b246eb97292f8ea2bf022334dc9341e174c11d1422022916cbd76389c8e482b0\n\n※確認できた情報源が限られているため、内容は未確認の候補として扱うよ。",
+    "sources": [
+      {
+        "title": "【まいぜんシスターズ】大きい家を作るぞ!!【Part11 ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DBa9G6WBBCnE&rut=57a9a67859130f18f0f4ca946d8a966d923986e957d58689e8955cf52303c155",
+        "relevance": 0.4
+      },
+      {
+        "title": "大きい家を羨ましがる息子・・・ | 生活・身近な話題 | 発言小町",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fkomachi.yomiuri.co.jp%2Ftopics%2Fid%2F1030745%2F&rut=d0f93dd7a9f90c396640ce9861b840d11f33f96974c08a195bfdc0bd098a42a2",
+        "relevance": 0.267
+      },
+      {
+        "title": "【衝撃】広すぎる家を建てると後悔する5つの理由!大きい家の ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Faki%2Dno%2Diezukuri.co.jp%2Ftoowidehouse%2Dregret%2F&rut=b246eb97292f8ea2bf022334dc9341e174c11d1422022916cbd76389c8e482b0",
+        "relevance": 0.267
+      },
+      {
+        "title": "今思うけど掃除嫌いの俺がなんで大きな家やねん - せいちょー ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fseichostyle.com%2Fblog%2Fima%2Domoukedo%2Dsojikiraino%2Dorega%2Ddande%2Dokinaieyanen%2F&rut=5a3d33c126cd1d7ee3d3ff55129dc109dcefe861edc9862ae472793e3b19fe10",
+        "relevance": 0.133
+      }
+    ]
+  },
+  {
+    "key": "もしマイクラの世界に住めたら何したい",
+    "text": "もしマイクラの世界に住めたら何したい？",
+    "mode": "web_research",
+    "seen_count": 1,
+    "confidence": 0.539,
+    "status": "candidate",
+    "first_seen": "2026-10-11T11:50:01",
+    "last_seen": "2026-10-11T11:50:01",
+    "answer_candidate": "Web検索で見つかった情報をまとめるね。\n\n・このゲームは特に目的が設定されているわけではないので、自分がやりたいことをすればいいのですが、ざっくり出来ることをリストアップしました。 建築. 釣り. 作物の栽培. 動物の飼育. 構造物の探索. ボス討伐. この中から紹介していきますね。 ①建築. マインクラフトと聞いたときに建築を思い浮かべる方はかなり多いと思います。 私もこのゲームを始めたときは、自分で家を建ててみたいなと思っていて、そこで初めてマインクラフトを購入しましたね。 最初はゲームに慣れず、なかなかいい建物を建てられませんでしたが、時間が経つにつれ建築センスもかなり上達しました。 世界には誰もが憧れるような建築センスを持ったクラフターがいっぱいいます。 一般的な住宅だけでなく、空島をつくったり、城をつくったり。\n  出典: 【マイクラ】できることをリストアップ!!何でもできるのか ... — https://duckduckgo.com/l/?uddg=http%3A%2F%2Ftalesplayer.net%2Fminecraft%2Ddekirukoto%2Dlist&rut=91de2f86d9b34a4ee92cda92a91caf7106e3955fe776c20443632404678412f6\n\n・マイクラに不可能は無いのかもしれない! 私がざっと思いつく限りのことは挙げてみましたが、きっと皆さまは他にもこんなこともやれるよ! なんて案がたくさんあるのではないかと思います。\n  出典: 【マイクラ】何をやるか迷ったら？マイクラでやれる21個の ... — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fnonbiri.saa0616.com%2Fpe%2Ddo%2F&rut=f8e224b61e409b608b3a25d0bd1b69240c26ef57a27b814478d72d39f8ad7227\n\n・そして今回は目標を持つことにした。 「マインクラフトで理想の世界をつくる」 これを最終目標とし、あいだに小さな目標もつくっていきたい。 例えば「仮拠点をつくる」とか「畑をつくる」「理想の家をマイハウスを建築する」などなど。\n  出典: 理想の世界を作りたい【MineCraft】｜えいみぜろぜろ — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fnote.com%2Feimi00note%2Fn%2Fn2785fc7e41e9&rut=0af822cd3f25e33da95607bb0ee5756c8a38d282c258be5d7addffd07792cbb6\n\n※確認できた情報源が限られているため、内容は未確認の候補として扱うよ。",
+    "sources": [
+      {
+        "title": "【マイクラ】できることをリストアップ!!何でもできるのか ...",
+        "url": "https://duckduckgo.com/l/?uddg=http%3A%2F%2Ftalesplayer.net%2Fminecraft%2Ddekirukoto%2Dlist&rut=91de2f86d9b34a4ee92cda92a91caf7106e3955fe776c20443632404678412f6",
+        "relevance": 0.444
+      },
+      {
+        "title": "【マイクラ】何をやるか迷ったら？マイクラでやれる21個の ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fnonbiri.saa0616.com%2Fpe%2Ddo%2F&rut=f8e224b61e409b608b3a25d0bd1b69240c26ef57a27b814478d72d39f8ad7227",
+        "relevance": 0.333
+      },
+      {
+        "title": "理想の世界を作りたい【MineCraft】｜えいみぜろぜろ",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fnote.com%2Feimi00note%2Fn%2Fn2785fc7e41e9&rut=0af822cd3f25e33da95607bb0ee5756c8a38d282c258be5d7addffd07792cbb6",
+        "relevance": 0.333
+      },
+      {
+        "title": "【マイクラやること91選】飽きた・やること無くなった人必見 ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Friminosu13.hatenablog.com%2Fentry%2F2022%2F09%2F30%2F224845&rut=eaf7d10f6d65696bce6d978e2544ec1618cc46ebbd9933a99a03783d0a057189",
+        "relevance": 0.278
+      }
+    ]
+  },
+  {
+    "key": "俺の好きなゲームはマイクラだよ",
+    "text": "俺の好きなゲームはマイクラだよ",
+    "mode": "web_research",
+    "seen_count": 1,
+    "confidence": 0.63,
+    "status": "candidate",
+    "first_seen": "2026-10-11T11:50:32",
+    "last_seen": "2026-10-11T11:50:32",
+    "answer_candidate": "Web検索で見つかった情報をまとめるね。\n\n・・Twitterhttps://twitter.com/yank__YT~お借りしているBGM・音素材配信サイト様~・効果音ラボ様・甘茶の音楽工房様・Music is VFR様・魔王魂様・Epidemicsound様・騒音のない世界様...\n  出典: みんなの好きなゲームはあった??【MInecraft/マイクラ】 - YouTube — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dp_x7ywvPmVg&rut=64cd4b78306fe219e1da533cc7c18421466722b8465372214fdaf535bc6a6b0b\n\n・わたしが好きなゲームやアニメについて、感想 (？ )や良いなと思ったところを書いていきたいと思います。 しばらくゲーム仲間に会えないので、ここで吐き出そうと考えました。 （この記事は感想と紹介を兼ねているような記事です。\n  出典: マインクラフトの好きなところ｜yuki｜note — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fnote.com%2Fyuki386%2Fn%2Fnb81378afa8f2&rut=b8a0d76a51468e852970e07e19733ed5fe829edda0e247eb1cf6856e5897475d\n\n・僕のプレイ体験も、自分自身の成長と共に遊び方、感じ方が変わってきてて面白い。 ブロックの世界っていうのが、一番の核心だと思う。 マイクラに似たようなゲームってあるけど、全部ブロックでできてるっていうのは多分マイクラだけだと思う。\n  出典: マイクラって本当に楽しい｜あきしぃ - note（ノート） — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fnote.com%2Fsarasa070%2Fn%2Fn717b898e0c7a&rut=dcd3942743d96950554ce28d92d18e61532851bc194decfab2fefde16c4b296d\n\n※確認できた情報源が限られているため、内容は未確認の候補として扱うよ。",
+    "sources": [
+      {
+        "title": "みんなの好きなゲームはあった??【MInecraft/マイクラ】 - YouTube",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dp_x7ywvPmVg&rut=64cd4b78306fe219e1da533cc7c18421466722b8465372214fdaf535bc6a6b0b",
+        "relevance": 0.667
+      },
+      {
+        "title": "マインクラフトの好きなところ｜yuki｜note",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fnote.com%2Fyuki386%2Fn%2Fnb81378afa8f2&rut=b8a0d76a51468e852970e07e19733ed5fe829edda0e247eb1cf6856e5897475d",
+        "relevance": 0.533
+      },
+      {
+        "title": "マイクラって本当に楽しい｜あきしぃ - note（ノート）",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fnote.com%2Fsarasa070%2Fn%2Fn717b898e0c7a&rut=dcd3942743d96950554ce28d92d18e61532851bc194decfab2fefde16c4b296d",
+        "relevance": 0.467
+      },
+      {
+        "title": "【マイクラやること91選】飽きた・やること無くなった人必見 ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Friminosu13.hatenablog.com%2Fentry%2F2022%2F09%2F30%2F224845&rut=eaf7d10f6d65696bce6d978e2544ec1618cc46ebbd9933a99a03783d0a057189",
+        "relevance": 0.333
+      }
+    ]
+  },
+  {
+    "key": "あと好きな色は紫ね",
+    "text": "あと好きな色は紫ね",
+    "mode": "web_research",
+    "seen_count": 1,
+    "confidence": 0.591,
+    "status": "candidate",
+    "first_seen": "2026-10-11T11:50:47",
+    "last_seen": "2026-10-11T11:50:47",
+    "answer_candidate": "Web検索で見つかった情報をまとめるね。\n\n・その色のイメージに自分が包まれている時に 「自分の気持ちを代わりに語ってくれる色」 に惹かれることもあれば 「それが足りなくて求めている時」 に惹かれることもあります。 あなたが、最近気になる色は何色ですか？ ずっと好きな色は何色ですか？\n  出典: 好きな色でわかる心理・意味 まとめ21色!惹かれる色はココロ ... — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fla%2Dmacouleur.com%2Fcolumn%2Fcolor%2Dcollection%2D1&rut=43a12e26d5682d2033c1340b6d7e4bdf03d7ef4d63eda88b5d11260c7f2db603\n\n・あなたの好きな色は何ですか？ ズバリ! 色と心の状態はリンクしています。 皆さんが日常当たり前に目にする色は、心理に基づいた色が使われているのは知っていますか？ ラベルの色、看板や空間。\n  出典: 好きな色で分かる性格・心理・相性17種類!診断テスト[色彩 ... — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fspicomi.net%2Farticles%2F185&rut=b638d232f2cfac327c319bf12ba6dc0ba247068c4f260e232c5d319065b65534\n\n・紫（パープル）を好む人との相性は、同じように個性的でクリエイティブな人や、深い感性を持つ人と良い関係を築けます。 青やピンクなどの落ち着いた色や暖かみのある色を好む人は、紫好きな人の独自性に共感しやすいでしょう。 一方で、赤やオレンジなど情熱的な色を好む人とは異なる部分もありますが、その違いが互いに新しい刺激や学びをもたらし、バランスの取れた関係を築くことができる可能性があります。 紫（パープル）の意味は恋愛において何ですか？ 恋愛において、紫（パープル）は「神秘的な愛」や「精神的なつながり」を象徴します。 紫を好む人は、恋愛に対しても深い絆や精神的なつながりを求める傾向があります。\n  出典: 紫（パープル）が好きな人の性格や恋愛観、スピリチュアルな ... — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fissei%2Dsuzuki.org%2F%25E7%25B4%25AB%25EF%25BC%2588%25E3%2583%2591%25E3%2583%25BC%25E3%2583%2597%25E3%2583%25AB%25EF%25BC%2589%25E3%2581%258C%25E5%25A5%25BD%25E3%2581%258D%25E3%2581%25AA%25E4%25BA%25BA%25E3%2581%25AE%25E6%2580%25A7%25E6%25A0%25BC%25E3%2582%2584%25E6%2581%258B%25E6%2584%259B%25E8%25A6%25B3%25E3%2580%2581%25E3%2582%25B9%25E3%2583%2594%2F&rut=2edd828d2348fa37069f7fe7dd4ad6a94ab39770787adf3cd5c803903a8b04fb\n\n※確認できた情報源が限られているため、内容は未確認の候補として扱うよ。",
+    "sources": [
+      {
+        "title": "好きな色でわかる心理・意味 まとめ21色!惹かれる色はココロ ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fla%2Dmacouleur.com%2Fcolumn%2Fcolor%2Dcollection%2D1&rut=43a12e26d5682d2033c1340b6d7e4bdf03d7ef4d63eda88b5d11260c7f2db603",
+        "relevance": 0.556
+      },
+      {
+        "title": "好きな色で分かる性格・心理・相性17種類!診断テスト[色彩 ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fspicomi.net%2Farticles%2F185&rut=b638d232f2cfac327c319bf12ba6dc0ba247068c4f260e232c5d319065b65534",
+        "relevance": 0.444
+      },
+      {
+        "title": "紫（パープル）が好きな人の性格や恋愛観、スピリチュアルな ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fissei%2Dsuzuki.org%2F%25E7%25B4%25AB%25EF%25BC%2588%25E3%2583%2591%25E3%2583%25BC%25E3%2583%2597%25E3%2583%25AB%25EF%25BC%2589%25E3%2581%258C%25E5%25A5%25BD%25E3%2581%258D%25E3%2581%25AA%25E4%25BA%25BA%25E3%2581%25AE%25E6%2580%25A7%25E6%25A0%25BC%25E3%2582%2584%25E6%2581%258B%25E6%2584%259B%25E8%25A6%25B3%25E3%2580%2581%25E3%2582%25B9%25E3%2583%2594%2F&rut=2edd828d2348fa37069f7fe7dd4ad6a94ab39770787adf3cd5c803903a8b04fb",
+        "relevance": 0.333
+      },
+      {
+        "title": "紫色が好きな人の心理は？女性＆男性別の性格の特徴や相性 ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fbelcy.jp%2F46942&rut=a1832de455df0eafd337b0b0c65b9b3cbe17605d121a175b16d2ee046de62072",
+        "relevance": 0.333
+      }
+    ]
+  },
+  {
+    "key": "まいくらってやってる",
+    "text": "まいくらってやってる？",
+    "mode": "web_research",
+    "seen_count": 1,
+    "confidence": 0.397,
+    "status": "candidate",
+    "first_seen": "2026-10-11T11:51:10",
+    "last_seen": "2026-10-11T11:51:10",
+    "answer_candidate": "Web検索で見つかった情報をまとめるね。\n\n・今のバニラって何があるんです？ どうも、何も知らない川井蓮です。 今回はマインクラフトをやっていきたいと思います。 初見さん大歓迎なの ...\n  出典: 【マイクラ】何すればいいかな？【マインクラフト-maincraft ... — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DrZ3lfVUQ8Uc&rut=fc29146c1598575c6015054abf43f0f647ff52234e3ef102b9db2d8b531700f4\n\n・マインクラフトの日本公式YouTubeチャンネル、Minecraft Japan です。 奇妙な裂け目がオーバーワールドのいたるところに開いています… どこへ繋がっているのでしょうか？ それは、 Minecraft Dungeons II (マインクラフト ダンジョンズ 2) に登場する新たな次元、 Sift (シフト) へと続いています。...\n  出典: マインクラフト 日本公式 / Minecraft Japan - YouTube — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.youtube.com%2Fminecraftjapan&rut=805063b2a06004e8c82cc4c85c99a241828ff0e305f6284cce048cd4be316ed1\n\n※確認できた情報源が限られているため、内容は未確認の候補として扱うよ。",
+    "sources": [
+      {
+        "title": "【マイクラ】何すればいいかな？【マインクラフト-maincraft ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DrZ3lfVUQ8Uc&rut=fc29146c1598575c6015054abf43f0f647ff52234e3ef102b9db2d8b531700f4",
+        "relevance": 0.222
+      },
+      {
+        "title": "マインクラフト 日本公式 / Minecraft Japan - YouTube",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.youtube.com%2Fminecraftjapan&rut=805063b2a06004e8c82cc4c85c99a241828ff0e305f6284cce048cd4be316ed1",
+        "relevance": 0.111
+      }
+    ]
+  },
+  {
+    "key": "aiって眠くなることある",
+    "text": "aiって眠くなることある？",
+    "mode": "web_research",
+    "seen_count": 1,
+    "confidence": 0.535,
+    "status": "candidate",
+    "first_seen": "2026-10-11T11:51:31",
+    "last_seen": "2026-10-11T11:51:31",
+    "answer_candidate": "Web検索で見つかった情報をまとめるね。\n\n・AIモデルの性能を高めるには、人間の脳のように何を記憶として残すかを判断できるようになることが重要かもしれない。大規模言語モデルはAI ...\n  出典: AIを\"眠らせ\"、記憶の選別と定着を目指す技術 | WIRED.jp — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwired.jp%2Farticle%2Fsleeptime%2Dcompute%2Dchatbots%2Dmemory%2F&rut=271caf23fbbbd2541664c6039a7cb96020da39db4801cc20f8a9eb9c0b2fc554\n\n・AIそのものに害があるわけではなく、「画面を見続けることで起きる眼精疲労・首こり・睡眠への影響」という、スマホ・PCと同じ問題が起きています。 今日、AIを使いながら身体への負担を減らす具体的な方法を整理します。\n  出典: Aiを使い始めてから目が疲れる・眠れない。画面時間を減らしながらaiを使い続けるガイド | ねこのai研究所 — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fai%2Dlab%2Dneko.com%2Fai%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2584%25E5%25A7%258B%25E3%2582%2581%25E3%2581%25A6%25E3%2581%258B%25E3%2582%2589%25E7%259B%25AE%25E3%2581%258C%25E7%2596%25B2%25E3%2582%258C%25E3%2582%258B%25E3%2583%25BB%25E7%259C%25A0%25E3%2582%258C%25E3%2581%25AA%25E3%2581%2584%25E3%2580%2582%25E7%2594%25BB%25E9%259D%25A2%25E6%2599%2582%2F&rut=fc0e24d71bb15ecc3b3ac9f8d5c42bde2eaa2da357c4c6ad5073fb7c9d311556\n\n・AIにも睡眠が必要なようです。 米国のカリフォルニア大学（University of California）で行われた研究によって、 人間の脳を模したAI「ニューラルネット」に生物の睡眠を模倣する「オフライン期間」を導入することで、古い仕事を忘れずに新しい仕事をこなせるようになったことが示されました ...\n  出典: Aiも睡眠をとると学習が改善すると判明! - ナゾロジー — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fnazology.kusuguru.co.jp%2Farchives%2F118066&rut=2074f9c4c2ced4a7936d40cf68301f35278da9b7565f147d6495e35d6153a3a7\n\n※確認できた情報源が限られているため、内容は未確認の候補として扱うよ。",
+    "sources": [
+      {
+        "title": "AIを\"眠らせ\"、記憶の選別と定着を目指す技術 | WIRED.jp",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwired.jp%2Farticle%2Fsleeptime%2Dcompute%2Dchatbots%2Dmemory%2F&rut=271caf23fbbbd2541664c6039a7cb96020da39db4801cc20f8a9eb9c0b2fc554",
+        "relevance": 0.364
+      },
+      {
+        "title": "Aiを使い始めてから目が疲れる・眠れない。画面時間を減らしながらaiを使い続けるガイド | ねこのai研究所",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fai%2Dlab%2Dneko.com%2Fai%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2584%25E5%25A7%258B%25E3%2582%2581%25E3%2581%25A6%25E3%2581%258B%25E3%2582%2589%25E7%259B%25AE%25E3%2581%258C%25E7%2596%25B2%25E3%2582%258C%25E3%2582%258B%25E3%2583%25BB%25E7%259C%25A0%25E3%2582%258C%25E3%2581%25AA%25E3%2581%2584%25E3%2580%2582%25E7%2594%25BB%25E9%259D%25A2%25E6%2599%2582%2F&rut=fc0e24d71bb15ecc3b3ac9f8d5c42bde2eaa2da357c4c6ad5073fb7c9d311556",
+        "relevance": 0.364
+      },
+      {
+        "title": "Aiも睡眠をとると学習が改善すると判明! - ナゾロジー",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fnazology.kusuguru.co.jp%2Farchives%2F118066&rut=2074f9c4c2ced4a7936d40cf68301f35278da9b7565f147d6495e35d6153a3a7",
+        "relevance": 0.364
+      },
+      {
+        "title": "AIが眠る？論文で話題の「LLM睡眠」を解説 - AI Brief",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fai%2Dnews.links%2Dcreate.co.jp%2Farticles%2F5843&rut=f6781d1664cec9f9af09cfda2080dde112eea662a1ed58ba13e0fdb9a9348f59",
+        "relevance": 0.273
+      }
+    ]
+  },
+  {
+    "key": "ところできょうってなにしてたの",
+    "text": "ところできょうってなにしてたの？",
+    "mode": "web_research",
+    "seen_count": 1,
+    "confidence": 0.513,
+    "status": "candidate",
+    "first_seen": "2026-10-11T11:51:51",
+    "last_seen": "2026-10-11T11:51:51",
+    "answer_candidate": "Web検索で見つかった情報をまとめるね。\n\n・ところ＋助詞【N3 Grammar】文法・例文：「財布を無くして困っているところへ彼が偶然通りかかった。 」のように丁度「～」というタイミングで、それを中断させてしまうような出来事や、変化を起こす何かが起こったと言いたい時に使います。\n  出典: ところへ/ところに/ところで Grammar【N2/N3文法】 - Hedgehog ... — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fhedgehog%2Djapanese.com%2Fgrammar%2Fjlpt%2Dn2%2Ftokoroe%2F&rut=cb829de0318f458e244392dab9d75016f2be6ea4da146e0ddba5d913ace7eeaf\n\n・「ところで」の意味は《接続助詞「ところで」から》 いったん言葉を切って、話題を変えるとき用いるのこと。 Weblio国語辞典では「ところで」の意味や使い方、用例、類似表現などを解説しています。\n  出典: 「ところで」の意味や使い方 わかりやすく解説 Weblio辞書 — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.weblio.jp%2Fcontent%2F%25E3%2581%25A8%25E3%2581%2593%25E3%2582%258D%25E3%2581%25A7&rut=24ce6269041639264af359940048488a3d9017f96b0a483fc6e83070eeb07327\n\n・近世後期になって、逆接の確定または 仮定条件 が生まれた。 近代以降は、もっぱら逆接の意にのみ用いられ、「ところが」の 領域 をも占めるようになった。 現代語 では、「たとえ」「よし」「よしんば」などの 副詞 と呼応して用いられることが多い。\n  出典: ところで (トコロデ)とは？ 意味や使い方 - コトバンク — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fkotobank.jp%2Fword%2F%25E3%2581%25A8%25E3%2581%2593%25E3%2582%258D%25E3%2581%25A7%2D583254&rut=7adf433563d2abe8b96366050d7c93a5c39fa8d88c7e6a9559e917d8ed686caa\n\n※確認できた情報源が限られているため、内容は未確認の候補として扱うよ。",
+    "sources": [
+      {
+        "title": "ところへ/ところに/ところで Grammar【N2/N3文法】 - Hedgehog ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fhedgehog%2Djapanese.com%2Fgrammar%2Fjlpt%2Dn2%2Ftokoroe%2F&rut=cb829de0318f458e244392dab9d75016f2be6ea4da146e0ddba5d913ace7eeaf",
+        "relevance": 0.333
+      },
+      {
+        "title": "「ところで」の意味や使い方 わかりやすく解説 Weblio辞書",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.weblio.jp%2Fcontent%2F%25E3%2581%25A8%25E3%2581%2593%25E3%2582%258D%25E3%2581%25A7&rut=24ce6269041639264af359940048488a3d9017f96b0a483fc6e83070eeb07327",
+        "relevance": 0.333
+      },
+      {
+        "title": "ところで (トコロデ)とは？ 意味や使い方 - コトバンク",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fkotobank.jp%2Fword%2F%25E3%2581%25A8%25E3%2581%2593%25E3%2582%258D%25E3%2581%25A7%2D583254&rut=7adf433563d2abe8b96366050d7c93a5c39fa8d88c7e6a9559e917d8ed686caa",
+        "relevance": 0.333
+      },
+      {
+        "title": "「のところ」の用法【例文で学ぶ 日本語文法】",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fjapanese%2Dlanguage%2Deducation.com%2Fnotokoro%2F&rut=d96bc49f7a47036a3e21de7c1a733e8dff652c49f82bf83c3b3f9303d4f09081",
+        "relevance": 0.267
+      }
+    ]
+  },
+  {
+    "key": "minecraftjavaeditionの最新バージョンを調べて",
+    "text": "Minecraft Java Editionの最新バージョンを調べて",
+    "mode": "web_research",
+    "seen_count": 1,
+    "confidence": 0.63,
+    "status": "candidate",
+    "first_seen": "2026-10-11T11:52:03",
+    "last_seen": "2026-10-11T11:52:03",
+    "answer_candidate": "Web検索で見つかった情報をまとめるね。\n\n・マイクラアップデートはいつ来る？ 「マイクラのアプデはいつ来る？」「現在の最新バージョン番号はいくつ？」「次のアップデートには何が追加される？」と気になっている方は多いのではないでしょうか。Minecraft（マインクラフト）は2024年以降、Java版・統合版（Bedrock Edition）ともに 「Drop ...\n  出典: マイクラ 最新バージョンはいくつ？｜現在の番号とアップデート履歴 — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwasabi%2Dpatch.com%2F2026%2F07%2F01%2Fminecraft%2Dupdate%2Ditsu%2F&rut=da5393f32e7117677aada36aebe7dd8baf412d60b1c49c8409ad4c625ef078e0\n\n・マイクラ 最新バージョン【2026年6月現在】 マインクラフト（Minecraft）の最新バージョンは、 2026年6月17日 に配信された「カオス・キューブド（Chaos Cubed）」です。Java版・統合版ともに同日リリースされており、新バイオーム「硫黄の洞窟」や新MOB「サルファーキューブ」が追加されています。\n  出典: マイクラ 最新バージョン完全ガイド｜Java版・統合版の現在のバージョンと更新履歴を徹底解説【2026年最新】 — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwasabi%2Dpatch.com%2F2026%2F06%2F17%2Fminecraft%2Dversion%2F&rut=8261bb88bc6c59aeff4bdf329aeb4fcfb0cc69314289310a2156dd1f77f0f9c9\n\n・MinecraftJava版の最新バージョンは何ですか？アプデ日も教えて下さい。 Java版の最新バージョンは26.2で、アップデート日は2026年6月17日です。\n  出典: MinecraftJava版の最新バージョンは何ですか？アプデ日も教えて下さ... - Yahoo!知恵袋 — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fdetail.chiebukuro.yahoo.co.jp%2Fqa%2Fquestion_detail%2Fq13330458948&rut=ea5362373b4e7254375e946fd7945a7592f97783497f8eff8dc048011cc35175\n\n※確認できた情報源が限られているため、内容は未確認の候補として扱うよ。",
+    "sources": [
+      {
+        "title": "マイクラ 最新バージョンはいくつ？｜現在の番号とアップデート履歴",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwasabi%2Dpatch.com%2F2026%2F07%2F01%2Fminecraft%2Dupdate%2Ditsu%2F&rut=da5393f32e7117677aada36aebe7dd8baf412d60b1c49c8409ad4c625ef078e0",
+        "relevance": 0.844
+      },
+      {
+        "title": "マイクラ 最新バージョン完全ガイド｜Java版・統合版の現在のバージョンと更新履歴を徹底解説【2026年最新】",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwasabi%2Dpatch.com%2F2026%2F06%2F17%2Fminecraft%2Dversion%2F&rut=8261bb88bc6c59aeff4bdf329aeb4fcfb0cc69314289310a2156dd1f77f0f9c9",
+        "relevance": 0.656
+      },
+      {
+        "title": "MinecraftJava版の最新バージョンは何ですか？アプデ日も教えて下さ... - Yahoo!知恵袋",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fdetail.chiebukuro.yahoo.co.jp%2Fqa%2Fquestion_detail%2Fq13330458948&rut=ea5362373b4e7254375e946fd7945a7592f97783497f8eff8dc048011cc35175",
+        "relevance": 0.594
+      },
+      {
+        "title": "【マイクラ】「ウィルダネス・バウンド」正式リリース!最新アップデート情報・新要素と過去の変更点まとめ【Java版/統合版/スイッチ ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fgamepedia.jp%2Fminecraft%2Farchives%2F1622&rut=cc78817d8bc905929e7db99500b989d2374d3971b70f5cba2b8ac651079e4322",
+        "relevance": 0.469
+      }
+    ]
+  },
+  {
+    "key": "そのバージョンの公式リリースノートも教えて",
+    "text": "そのバージョンの公式リリースノートも教えて",
+    "mode": "web_research",
+    "seen_count": 1,
+    "confidence": 0.624,
+    "status": "candidate",
+    "first_seen": "2026-10-11T11:52:18",
+    "last_seen": "2026-10-11T11:52:18",
+    "answer_candidate": "Web検索で見つかった情報をまとめるね。\n\n・Blenderのバージョン管理を理解する：リリースサイクル、LTSと通常版の違い、プロジェクトを壊さずにアップデートする方法、公式リリースノートの確認先。 トラブルを防ぐアップデート手順 01 新しいバージョンをインストールする前に、進行中プロジェクトのバックアップを取る。 02 既存の ...\n  出典: Blender最新情報：バージョン、LTS、リリースノート — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fblender%2Dkyoshitsu.jp%2Fnouveautes%2Dblender&rut=163d34da3479568a485900765cef1bc2c812d2bd46fe068d8aef77b6c454d08c\n\n・Microsoft 365 Apps 用の月次チャネル リリースのリリース ノートを IT 担当者に提供します。 これらのリリース ノートでは、Microsoft 365 Apps for enterprise、Microsoft 365 Apps for business、および Project と Visio のデスクトップ アプリのサブスクリプション バージョンの最新チャネルの更新に含まれる新機能と ...\n  出典: 最新チャネル リリースのリリース ノート - Office release notes ... — https://duckduckgo.com/l/?uddg=https%3A%2F%2Flearn.microsoft.com%2Fja%2Djp%2Fofficeupdates%2Fcurrent%2Dchannel&rut=99b269984a3c9763880895cd646ab9992ac1cdf822eb8fb5351eacaed23abba4\n\n・カスタマイズ、リリース、開発、Experience Cloud、モバイルおよび Salesforce CMS のリリースノートがプラットフォームに含まれるようにセクションを統合しました。 Trust Status Maintenance Site (信頼状況メンテナンスサイト)。 Sandbox およびその他のリリース日時を確認します。 メンテナンス日を確認するには、 [Instances (インスタンス)] と自分のインスタンスを選択します。 Release Readiness Trailblazers。 各種リソースと専門家にアクセスし、リリース準備状況に関するあらゆることを確認します。\n  出典: Salesforce Winter '27 リリースノート | Salesforce ヘルプ — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fhelp.salesforce.com%2Fs%2FarticleView%3Fid%3Drelease%2Dnotes.salesforce_release_notes.htm%26language%3Dja%26type%3D5&rut=3ffaca3b518fec03cb40c7aa54e8690ceb2354b42d016f8bd3aa50b533c5a811\n\n※確認できた情報源が限られているため、内容は未確認の候補として扱うよ。",
+    "sources": [
+      {
+        "title": "Blender最新情報：バージョン、LTS、リリースノート",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fblender%2Dkyoshitsu.jp%2Fnouveautes%2Dblender&rut=163d34da3479568a485900765cef1bc2c812d2bd46fe068d8aef77b6c454d08c",
+        "relevance": 0.619
+      },
+      {
+        "title": "最新チャネル リリースのリリース ノート - Office release notes ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Flearn.microsoft.com%2Fja%2Djp%2Fofficeupdates%2Fcurrent%2Dchannel&rut=99b269984a3c9763880895cd646ab9992ac1cdf822eb8fb5351eacaed23abba4",
+        "relevance": 0.476
+      },
+      {
+        "title": "Salesforce Winter '27 リリースノート | Salesforce ヘルプ",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fhelp.salesforce.com%2Fs%2FarticleView%3Fid%3Drelease%2Dnotes.salesforce_release_notes.htm%26language%3Dja%26type%3D5&rut=3ffaca3b518fec03cb40c7aa54e8690ceb2354b42d016f8bd3aa50b533c5a811",
+        "relevance": 0.381
+      },
+      {
+        "title": "リリースノート テンプレート（書き方とサンプル例） - NotePM",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fnotepm.jp%2Ftemplate%2Frelease&rut=117aae12954a9c5356f1fa24e30248af2382dcd3165f04579e353377d7800b24",
+        "relevance": 0.333
+      }
+    ]
+  },
+  {
+    "key": "3.minecraftjavaeditionの最新バージョンを調べて",
+    "text": "3. Minecraft Java Editionの最新バージョンを調べて",
+    "mode": "web_research",
+    "seen_count": 1,
+    "confidence": 0.63,
+    "status": "candidate",
+    "first_seen": "2026-10-11T11:59:46",
+    "last_seen": "2026-10-11T11:59:46",
+    "answer_candidate": "Web検索で見つかった情報をまとめるね。\n\n・マイクラアップデートはいつ来る？ 「マイクラのアプデはいつ来る？」「現在の最新バージョン番号はいくつ？」「次のアップデートには何が追加される？」と気になっている方は多いのではないでしょうか。Minecraft（マインクラフト）は2024年以降、Java版・統合版（Bedrock Edition）ともに 「Drop ...\n  出典: マイクラ 最新バージョンはいくつ？｜現在の番号とアップデート履歴 — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwasabi%2Dpatch.com%2F2026%2F07%2F01%2Fminecraft%2Dupdate%2Ditsu%2F&rut=da5393f32e7117677aada36aebe7dd8baf412d60b1c49c8409ad4c625ef078e0\n\n・マイクラ 最新バージョン【2026年6月現在】 マインクラフト（Minecraft）の最新バージョンは、 2026年6月17日 に配信された「カオス・キューブド（Chaos Cubed）」です。Java版・統合版ともに同日リリースされており、新バイオーム「硫黄の洞窟」や新MOB「サルファーキューブ」が追加されています。\n  出典: マイクラ 最新バージョン完全ガイド｜Java版・統合版の現在のバージョンと更新履歴を徹底解説【2026年最新】 — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwasabi%2Dpatch.com%2F2026%2F06%2F17%2Fminecraft%2Dversion%2F&rut=8261bb88bc6c59aeff4bdf329aeb4fcfb0cc69314289310a2156dd1f77f0f9c9\n\n・Windows 用、Mac 用、その他のバージョンの Minecraft をダウンロード。Java 版と Bedrock 版のサーバー ソフトウェアをダウンロードして、友達と一緒にプレイを始めましょう。Minecraft ランチャーについてさらに詳しくはこちら。\n  出典: Minecraft とサーバー ソフトウェアをダウンロード | Minecraft — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.minecraft.net%2Fja%2Djp%2Fdownload&rut=5462a1d7416be53357abbce5ec048fa5a7dd3ab4496b9c695694a86ac425282b\n\n※確認できた情報源が限られているため、内容は未確認の候補として扱うよ。",
+    "sources": [
+      {
+        "title": "マイクラ 最新バージョンはいくつ？｜現在の番号とアップデート履歴",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwasabi%2Dpatch.com%2F2026%2F07%2F01%2Fminecraft%2Dupdate%2Ditsu%2F&rut=da5393f32e7117677aada36aebe7dd8baf412d60b1c49c8409ad4c625ef078e0",
+        "relevance": 0.818
+      },
+      {
+        "title": "マイクラ 最新バージョン完全ガイド｜Java版・統合版の現在のバージョンと更新履歴を徹底解説【2026年最新】",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwasabi%2Dpatch.com%2F2026%2F06%2F17%2Fminecraft%2Dversion%2F&rut=8261bb88bc6c59aeff4bdf329aeb4fcfb0cc69314289310a2156dd1f77f0f9c9",
+        "relevance": 0.636
+      },
+      {
+        "title": "Minecraft とサーバー ソフトウェアをダウンロード | Minecraft",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.minecraft.net%2Fja%2Djp%2Fdownload&rut=5462a1d7416be53357abbce5ec048fa5a7dd3ab4496b9c695694a86ac425282b",
+        "relevance": 0.545
+      },
+      {
+        "title": "【マイクラ】「ウィルダネス・バウンド」正式リリース!最新アップデート情報・新要素と過去の変更点まとめ【Java版/統合版/スイッチ ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fgamepedia.jp%2Fminecraft%2Farchives%2F1622&rut=cc78817d8bc905929e7db99500b989d2374d3971b70f5cba2b8ac651079e4322",
+        "relevance": 0.455
+      }
+    ]
+  },
+  {
+    "key": "マインクラフトサバイバルサーバーを調べてください。日本の",
+    "text": "マインクラフトサバイバルサーバーを調べてください。日本の",
+    "mode": "web_research",
+    "seen_count": 1,
+    "confidence": 0.597,
+    "status": "candidate",
+    "first_seen": "2026-10-11T12:13:53",
+    "last_seen": "2026-10-11T12:13:53",
+    "answer_candidate": "Web検索で見つかった情報をまとめるね。\n\n・日本のマインクラフトサーバーを探せるサイト。 Java版・Bedrock版対応。 Minecraftサーバー運営者は無料で宣伝できます。\n  出典: サーバー一覧 - 日本のマイクラサーバーリスト | 日本の ... — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fmineserver.jp%2Fservers%3Fedition%3Djava&rut=4ad81b84494fbc13160448d2a9973bd0614ebe7f79a5e0646f02da106ceea301\n\n・稼働状況・運営の活発さ・遊び方から、日本のMinecraftサーバーを探せます。 PCでもスマホでも大丈夫。 統合版で入れるサーバーも、ワンタップで絞り込めます。 Java版と統合版、両方のアカウントを連携することもできます。 稼働状況を自動でチェックし、運営の活発さでランキング。 止まっているサーバーは一覧に出ません。 掲載しているのは、運営者本人の確認が取れたサーバーだけ。 安心して遊びに行けます。 やりたいことを選ぶと、いま遊べるサーバーが見つかります。 運営の活発さと稼働状況から選んだ、今日のおすすめです。 dragon survival サーバー! 現在日本唯一! 2026年9月オープンの新規サーバー! 普通のサバイバルじゃ物足りない人へ。\n  出典: 日本のマイクラサーバーリスト | 日本のマイクラサーバーリスト — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fmineserver.jp%2F&rut=2720cb3a68651f4c2a6a0ad33a6e1749607e2382e4933fb474d194b4c821d27c\n\n・Japan Minecraft Serversは、日本のマインクラフトプレイヤーが日本語対応のマルチサーバーを探せる国内最大級のサーバーリストサイトです。 無料で使えて、登録不要でサーバーを検索できます。\n  出典: Japan Minecraft Servers（japanminecraftservers）完全ガイド ... — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwasabi%2Dpatch.com%2F2026%2F06%2F28%2Fjapan%2Dminecraft%2Dservers%2F&rut=d07cc6ceed54dfe772a85da63a13322db51e6d95142fad6e6341702cd4dabe98\n\n※確認できた情報源が限られているため、内容は未確認の候補として扱うよ。",
+    "sources": [
+      {
+        "title": "サーバー一覧 - 日本のマイクラサーバーリスト | 日本の ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fmineserver.jp%2Fservers%3Fedition%3Djava&rut=4ad81b84494fbc13160448d2a9973bd0614ebe7f79a5e0646f02da106ceea301",
+        "relevance": 0.48
+      },
+      {
+        "title": "日本のマイクラサーバーリスト | 日本のマイクラサーバーリスト",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fmineserver.jp%2F&rut=2720cb3a68651f4c2a6a0ad33a6e1749607e2382e4933fb474d194b4c821d27c",
+        "relevance": 0.44
+      },
+      {
+        "title": "Japan Minecraft Servers（japanminecraftservers）完全ガイド ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwasabi%2Dpatch.com%2F2026%2F06%2F28%2Fjapan%2Dminecraft%2Dservers%2F&rut=d07cc6ceed54dfe772a85da63a13322db51e6d95142fad6e6341702cd4dabe98",
+        "relevance": 0.44
+      },
+      {
+        "title": "マイクラサーバーリスト｜日本のMinecraftサーバー一覧 ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fmcservers.jp%2F&rut=22733388f5a9d6587d4c47bd4e41f22c17b1b78bd38bd60e3f07694eca41df70",
+        "relevance": 0.28
+      }
+    ]
+  },
+  {
+    "key": "drdounotについて調べて",
+    "text": "drdounotについて調べて",
+    "mode": "web_research",
+    "seen_count": 1,
+    "confidence": 0.544,
+    "status": "candidate",
+    "first_seen": "2026-10-11T12:18:55",
+    "last_seen": "2026-10-11T12:18:55",
+    "answer_candidate": "Web検索で見つかった情報をまとめるね。\n\n・設計 レンチ爆弾について 検証 リンク集 日本非公式Discordサーバー 荒らし等の報告もどうぞ おそらくリンク切れ 新しい方↓ https://discord.gg/bjJxx6E8Kc .io ゲーム Drednot.io • Starve.io • Surviv.io • Revast.io • ZombsRoyale.io • BOPZ.io あなたのコミュニティを含めたい ...\n  出典: Drednot.io Japan Wiki | Fandom — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fdrednotio.fandom.com%2Fja%2Fwiki%2FDrednot.io_Japan_Wiki&rut=17dabeb0fc10466a80c0eb81029216740f6d0806f3779c86c06d8127b8fe9194\n\n・アイテム時は('Packaged')（包装された）という形容詞が付き、持ち運び可能になる。 設置時は当たり判定を持たず、クリックすることで使用可能になる。 船を新規作成時に設置される\"Starter\"がついた設備(Helm1個、RC2個、Fabricator1個、Hatch1個) は、shredderで壊さない限り消える事は無い。 \"RC Turret ...\n  出典: アイテム一覧 | Drednot.io Japan Wiki | Fandom — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fdrednotio.fandom.com%2Fja%2Fwiki%2F%25E3%2582%25A2%25E3%2582%25A4%25E3%2583%2586%25E3%2583%25A0%25E4%25B8%2580%25E8%25A6%25A7&rut=4420057f4910ed4f50ec7f9d4949675e1b3593721b9392d28889cd2de0d860a9\n\n・このWikiについて このWikiは日本語圏のDonutSMPプレイヤーのために有志が作成した非公式情報サイトです。 公式サイトは DonutSMP公式ストア をご参照ください。 ※ 本Wikiの情報は随時更新されますが、ゲームのアップデートにより一部情報が古い場合があります。\n  出典: Donut SMP Wiki（日本語版） — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fdonutsmp%2Dwiki%2Djp.com%2Fwiki%2F%25E3%2583%25A1%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%259A%25E3%2583%25BC%25E3%2582%25B8&rut=cce93d8f9353f086ff7f43d6ee83fce16ac0cbe31638decdfe0372a36b7bfff4\n\n※確認できた情報源が限られているため、内容は未確認の候補として扱うよ。",
+    "sources": [
+      {
+        "title": "Drednot.io Japan Wiki | Fandom",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fdrednotio.fandom.com%2Fja%2Fwiki%2FDrednot.io_Japan_Wiki&rut=17dabeb0fc10466a80c0eb81029216740f6d0806f3779c86c06d8127b8fe9194",
+        "relevance": 0.533
+      },
+      {
+        "title": "アイテム一覧 | Drednot.io Japan Wiki | Fandom",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fdrednotio.fandom.com%2Fja%2Fwiki%2F%25E3%2582%25A2%25E3%2582%25A4%25E3%2583%2586%25E3%2583%25A0%25E4%25B8%2580%25E8%25A6%25A7&rut=4420057f4910ed4f50ec7f9d4949675e1b3593721b9392d28889cd2de0d860a9",
+        "relevance": 0.333
+      },
+      {
+        "title": "Donut SMP Wiki（日本語版）",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fdonutsmp%2Dwiki%2Djp.com%2Fwiki%2F%25E3%2583%25A1%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%259A%25E3%2583%25BC%25E3%2582%25B8&rut=cce93d8f9353f086ff7f43d6ee83fce16ac0cbe31638decdfe0372a36b7bfff4",
+        "relevance": 0.267
+      },
+      {
+        "title": "DrDonut - Donut SMP Wiki（日本語版）",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fdonutsmp%2Dwiki%2Djp.com%2Fwiki%2FDrDonut&rut=6e6512b05258ae54548bb4eba0d092a0cd78412aa7ecb3aea90e8ca3514a9f6d",
+        "relevance": 0.267
+      }
+    ]
+  },
+  {
+    "key": "最近の世界のニュースについて調べて",
+    "text": "最近の世界のニュースについて調べて",
+    "mode": "web_research",
+    "seen_count": 1,
+    "confidence": 0.568,
+    "status": "candidate",
+    "first_seen": "2026-10-11T12:24:30",
+    "last_seen": "2026-10-11T12:24:30",
+    "answer_candidate": "Web検索で見つかった情報をまとめるね。\n\n・世界の政治、経済、社会についての最新ニュースを、豊富なコンテンツと共に多面的に展開。 エンタメ、スポーツに加え、世界の文化やライフスタイルについて注目の情報が満載です。\n  出典: ロイター | 経済、株価、ビジネス、国際、政治ニュース — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.reuters.com%2Fjp%2F&rut=d31c0e44579bc352066b2f749e9dd28c98bc88bd1ee1f113a8d22078d3fafba9\n\n・国際政治や社会情勢、災害関連についてのニュースを発信しています。\n  出典: ワールド | 最新ワールドニュース | ロイター — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.reuters.com%2Fjp%2Fworld%2F&rut=f8042920988846f8553fb1c88f3de5168f7b15dda21ae30a62d2a69f0282fc9f\n\n・【読売新聞】世界各国の最新ニュースをわかりやすく紹介。 ロシアのウクライナ侵略や、様々な外交課題で緊張が高まる中国や北朝鮮、分断が広がるアメリカの動向など。\n  出典: 海外ニュース：最新の世界の動きを読み解く : 読売新聞 — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.yomiuri.co.jp%2Fworld%2F&rut=551a5aa9a686438177b72b5868ec42d426b8d36d263964657fbbaf4c80d42e3f\n\n※確認できた情報源が限られているため、内容は未確認の候補として扱うよ。",
+    "sources": [
+      {
+        "title": "ロイター | 経済、株価、ビジネス、国際、政治ニュース",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.reuters.com%2Fjp%2F&rut=d31c0e44579bc352066b2f749e9dd28c98bc88bd1ee1f113a8d22078d3fafba9",
+        "relevance": 0.471
+      },
+      {
+        "title": "ワールド | 最新ワールドニュース | ロイター",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.reuters.com%2Fjp%2Fworld%2F&rut=f8042920988846f8553fb1c88f3de5168f7b15dda21ae30a62d2a69f0282fc9f",
+        "relevance": 0.412
+      },
+      {
+        "title": "海外ニュース：最新の世界の動きを読み解く : 読売新聞",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.yomiuri.co.jp%2Fworld%2F&rut=551a5aa9a686438177b72b5868ec42d426b8d36d263964657fbbaf4c80d42e3f",
+        "relevance": 0.353
+      },
+      {
+        "title": "海外ニュース - エキサイトニュース",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.excite.co.jp%2Fnews%2Fworld%2Dtopic%2F&rut=974fb655a41844708bf854f0dc3c5186a29b3fb54d08cf97e6848c28dac33047",
+        "relevance": 0.294
+      }
+    ]
+  },
+  {
+    "key": "俺は紫が好きだ",
+    "text": "俺は紫が好きだ",
+    "mode": "web_research",
+    "seen_count": 2,
+    "confidence": 0.447,
+    "status": "candidate",
+    "first_seen": "2026-10-11T13:11:21",
+    "last_seen": "2026-10-11T13:11:34",
+    "answer_candidate": "Web検索で見つかった情報をまとめるね。\n\n・どっちだ…？（アイコンかロボトミか） 少なくとも言えるのは俺がかなりの紫好きだってこと。どうもみなさんこんにちは ...\n  出典: イナバ on X: \"どっちだ…？（アイコンかロボトミか） 少なくとも言えるのは俺がかなりの紫好きだってこと。どうもみなさんこんにちは ... — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fx.com%2Finaba398%2Fstatus%2F2085322507347968149&rut=8c028556fe334c229284c022b6d17812580deec17d63064c4290fe897c3927d4\n\n・俺がキヨのこと好きだなあって思うところは、キャラクターに対して物語に対して感情移入をしてくれるところなんだよね。 淡々としていくんじゃなくて、今回の ママにあいたいの実況もそうだけど 「鉄パイプで殺した」 のところから読めなかったの 個人的に読むのが辛かったのかな。→\n  出典: 紫暮 on X: \"俺がキヨのこと好きだなあって思うところは、キャラクターに対して物語に対して感情移入をしてくれるところなんだよね。 淡々とし ... — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fx.com%2Fsigure_oikawa%2Fstatus%2F2106736363496501421&rut=09dbba17f1028406ea6d811f5ae7403d84e5717d737f95588f42f338c0be2c65\n\n・株式会社ジーオーティー（本社：東京都港区、代表取締役：吉永敦仁）はBivy comic レーベルより2026年8月3日にコミックス『ハツコイ・リプライズ』（著：紫ネル）を発売…\n  出典: 俺だけが、好きみたいだ──抗えない恋のゆくえは？!紫ネル『ハツコイ・リプライズ』が8月3日発売! — https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.gamespark.jp%2Frelease%2Fprtimes%2F20260803%2F304784.html&rut=b640c4cb9a2b070ebff5f6822d53d230247cb1c65a910ff511cbbf82b11eafb0\n\n※確認できた情報源が限られているため、内容は未確認の候補として扱うよ。",
+    "sources": [
+      {
+        "title": "イナバ on X: \"どっちだ…？（アイコンかロボトミか） 少なくとも言えるのは俺がかなりの紫好きだってこと。どうもみなさんこんにちは ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fx.com%2Finaba398%2Fstatus%2F2085322507347968149&rut=8c028556fe334c229284c022b6d17812580deec17d63064c4290fe897c3927d4",
+        "relevance": 0.286
+      },
+      {
+        "title": "紫暮 on X: \"俺がキヨのこと好きだなあって思うところは、キャラクターに対して物語に対して感情移入をしてくれるところなんだよね。 淡々とし ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fx.com%2Fsigure_oikawa%2Fstatus%2F2106736363496501421&rut=09dbba17f1028406ea6d811f5ae7403d84e5717d737f95588f42f338c0be2c65",
+        "relevance": 0.286
+      },
+      {
+        "title": "俺だけが、好きみたいだ──抗えない恋のゆくえは？!紫ネル『ハツコイ・リプライズ』が8月3日発売!",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.gamespark.jp%2Frelease%2Fprtimes%2F20260803%2F304784.html&rut=b640c4cb9a2b070ebff5f6822d53d230247cb1c65a910ff511cbbf82b11eafb0",
+        "relevance": 0.143
+      },
+      {
+        "title": "俺だけが、好きみたいだ──抗えない恋のゆくえは？!紫ネル『ハツコイ・リプライズ』が8月3日発売! | ニコニコニュース",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fnews.nicovideo.jp%2Fwatch%2Fnw19618313&rut=d1874d88cc159f4c6032a2f2ca20f1d3a29ab558ae6ed3f5a9f1a3834c9acaaf",
+        "relevance": 0.143
+      }
+    ],
+    "latest_confidence": 0.447,
+    "latest_sources": [
+      {
+        "title": "イナバ on X: \"どっちだ…？（アイコンかロボトミか） 少なくとも言えるのは俺がかなりの紫好きだってこと。どうもみなさんこんにちは ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fx.com%2Finaba398%2Fstatus%2F2085322507347968149&rut=8c028556fe334c229284c022b6d17812580deec17d63064c4290fe897c3927d4",
+        "relevance": 0.286
+      },
+      {
+        "title": "紫暮 on X: \"俺がキヨのこと好きだなあって思うところは、キャラクターに対して物語に対して感情移入をしてくれるところなんだよね。 淡々とし ...",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fx.com%2Fsigure_oikawa%2Fstatus%2F2106736363496501421&rut=09dbba17f1028406ea6d811f5ae7403d84e5717d737f95588f42f338c0be2c65",
+        "relevance": 0.286
+      },
+      {
+        "title": "俺だけが、好きみたいだ──抗えない恋のゆくえは？!紫ネル『ハツコイ・リプライズ』が8月3日発売!",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.gamespark.jp%2Frelease%2Fprtimes%2F20260803%2F304784.html&rut=b640c4cb9a2b070ebff5f6822d53d230247cb1c65a910ff511cbbf82b11eafb0",
+        "relevance": 0.143
+      },
+      {
+        "title": "俺だけが、好きみたいだ──抗えない恋のゆくえは？!紫ネル『ハツコイ・リプライズ』が8月3日発売! | ニコニコニュース",
+        "url": "https://duckduckgo.com/l/?uddg=https%3A%2F%2Fnews.nicovideo.jp%2Fwatch%2Fnw19618313&rut=d1874d88cc159f4c6032a2f2ca20f1d3a29ab558ae6ed3f5a9f1a3834c9acaaf",
+        "relevance": 0.143
+      }
+    ]
+  },
+  {
+    "key": "俺の好きな色は何",
+    "text": "俺の好きな色は何？",
+    "mode": "local_fallback",
+    "seen_count": 1,
+    "confidence": 0.0,
+    "status": "candidate",
+    "first_seen": "2026-10-11T13:16:38",
+    "last_seen": "2026-10-11T13:16:38",
+    "answer_candidate": "その質問は、今の僕の内蔵知識だけでは正確に答えられないみたい。\nWeb検索が必要なら「〇〇を検索して」や「〇〇の最新情報を調べて」と頼んでね。",
+    "sources": []
+  },
+  {
+    "key": "こんいちは",
+    "text": "こんいちは",
+    "mode": "local_fallback",
+    "seen_count": 1,
+    "confidence": 0.0,
+    "status": "candidate",
+    "first_seen": "2026-10-11T13:33:38",
+    "last_seen": "2026-10-11T13:33:38",
+    "answer_candidate": "その質問は、今の僕の内蔵知識だけでは正確に答えられないみたい。\nWeb検索が必要なら「〇〇を検索して」や「〇〇の最新情報を調べて」と頼んでね。",
+    "sources": []
+  },
+  {
+    "key": "俺の好きな動物は",
+    "text": "俺の好きな動物は？",
+    "mode": "local_fallback",
+    "seen_count": 1,
+    "confidence": 0.0,
+    "status": "candidate",
+    "first_seen": "2026-10-11T13:38:27",
+    "last_seen": "2026-10-11T13:38:27",
+    "answer_candidate": "その質問は、今の僕の内蔵知識だけでは正確に答えられないみたい。\nWeb検索が必要なら「〇〇を検索して」や「〇〇の最新情報を調べて」と頼んでね。",
+    "sources": []
+  },
+  {
+    "key": "猫は",
+    "text": "猫は？",
+    "mode": "local_fallback",
+    "seen_count": 1,
+    "confidence": 0.0,
+    "status": "candidate",
+    "first_seen": "2026-10-11T13:47:30",
+    "last_seen": "2026-10-11T13:47:30",
+    "answer_candidate": "その質問は、今の僕の内蔵知識だけでは正確に答えられないみたい。\nWeb検索が必要なら「〇〇を検索して」や「〇〇の最新情報を調べて」と頼んでね。",
+    "sources": []
+  },
+  {
+    "key": "俺の好きな乗り物は車です",
+    "text": "俺の好きな乗り物は車です",
+    "mode": "local_fallback",
+    "seen_count": 1,
+    "confidence": 0.0,
+    "status": "candidate",
+    "first_seen": "2026-10-11T22:31:06",
+    "last_seen": "2026-10-11T22:31:06",
+    "answer_candidate": "その質問は、今の僕の内蔵知識だけでは正確に答えられないみたい。\nWeb検索が必要なら「〇〇を検索して」や「〇〇の最新情報を調べて」と頼んでね。",
+    "sources": []
+  },
+  {
+    "key": "２つだよ",
+    "text": "２つだよ",
+    "mode": "local_fallback",
+    "seen_count": 1,
+    "confidence": 0.0,
+    "status": "candidate",
+    "first_seen": "2026-10-11T22:32:08",
+    "last_seen": "2026-10-11T22:32:08",
+    "answer_candidate": "その質問は、今の僕の内蔵知識だけでは正確に答えられないみたい。\nWeb検索が必要なら「〇〇を検索して」や「〇〇の最新情報を調べて」と頼んでね。",
+    "sources": []
+  },
+  {
+    "key": "またどら",
+    "text": "またどら",
+    "mode": "local_fallback",
+    "seen_count": 1,
+    "confidence": 0.0,
+    "status": "candidate",
+    "first_seen": "2026-10-11T22:34:55",
+    "last_seen": "2026-10-11T22:34:55",
+    "answer_candidate": "その質問は、今の僕の内蔵知識だけでは正確に答えられないみたい。\nWeb検索が必要なら「〇〇を検索して」や「〇〇の最新情報を調べて」と頼んでね。",
+    "sources": []
+  },
+  {
+    "key": "橋って知ってる",
+    "text": "橋って知ってる？",
+    "mode": "local_fallback",
+    "seen_count": 1,
+    "confidence": 0.0,
+    "status": "candidate",
+    "first_seen": "2026-10-11T22:36:55",
+    "last_seen": "2026-10-11T22:36:55",
+    "answer_candidate": "その質問は、今の僕の内蔵知識だけでは正確に答えられないみたい。\nWeb検索が必要なら「〇〇を検索して」や「〇〇の最新情報を調べて」と頼んでね。",
+    "sources": []
+  }
+]
