@@ -19,7 +19,8 @@ angelwhite/
 ```
 
 ## ⚠️ Important Notices & Disclaimer
-* **Early Development Stage:** This project is in its early stages of development, and there may be numerous issues or bugs. Please note that bug reports or glitch notifications may be ignored or dismissed.
+* **Early Development Stage:** This project is in its early stages of development, and there may be numerous issues or bugs.**Please note that bug reports or glitch notifications may be ignored or dismissed.**
+
 * **Handle with Care:** Please handle the code carefully, as it may break or cause unexpected behavior.
 * **Disclaimer:** The author assumes no responsibility for any issues, malfunctions, or damages resulting from the use of this code.
 
