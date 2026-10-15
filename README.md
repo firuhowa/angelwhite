@@ -32,7 +32,5 @@ angelwhite/
 
 ## ✉️ お問い合わせ (DM)
 ご質問や引用のご相談は、以下の連絡先までお願いいたします。
-* **Discord:** `@000`
-* **X (旧Twitter):** `@000`
-* **LINE:** `@000`
-* **Mail:** `exmple@gmail.com`
+* **Discord:** `https://discord.gg/xpw5fgMEcW`
+* **Mail:** `darksiroyuki@gmail.com`
