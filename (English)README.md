@@ -35,3 +35,7 @@ angelwhite/
 For questions or inquiries regarding quotation/usage permissions, please contact us via the following:
 * **Discord:** `https://discord.gg/xpw5fgMEcW`
 * **Email:** `darksiroyuki@gmail.com`
+## contribution
+* If you would like to contribute to this project, please join the Discord server.
+
+https://discord.gg/xpw5fgMEcW
