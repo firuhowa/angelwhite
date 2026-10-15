@@ -34,3 +34,8 @@ angelwhite/
 ご質問や引用のご相談は、以下の連絡先までお願いいたします。
 * **Discord:** `https://discord.gg/xpw5fgMEcW`
 * **Mail:** `darksiroyuki@gmail.com`
+
+## 貢献
+* このプロジェクトに貢献したい場合はdiscordサーバーに入ってください
+https://discord.gg/xpw5fgMEcW
+
