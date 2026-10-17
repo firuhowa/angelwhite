@@ -1514,83 +1514,76 @@ class JapaneseAI:
         return messages
 
     def _handle_topic_choice(self, text: str, context=None, progress_callback=None):
-        """直前に表示した話題メニューに対する 1/2/3 を処理する。"""
-        choice = str(text or "").strip()
-        if choice not in {"1", "2", "3", "１", "２", "３"}:
+        """直前に表示した話題メニューへの数字入力を処理する。"""
+        choice = str(text or "").strip().translate(str.maketrans("０１２３", "0123"))
+        if choice not in {"1", "2", "3"}:
             return None
-        choice = choice.translate(str.maketrans("１２３", "123"))
+
         messages = self._context_messages(context)
-        last_assistant = messages[-1] if messages else ""
-        topic = None
-        # 現在のチャット履歴で直前のAIメッセージが既存メニューか、好み共有メニューの場合だけ選択扱い。
-        has_preference_menu = (
-                "1. Web検索をする" in last_assistant
-                and "2. そのまま雑談を続ける" in last_assistant
-                and "3. 終了する" in last_assistant
-        )
-        has_topic_menu = (
-                "1." in last_assistant
-                and "2. Web検索をする" in last_assistant
-                and "3. これで話を終わりにする" in last_assistant
-        )
-        if has_preference_menu or has_topic_menu:
-            match = re.search(r"よかったら「(.+?)」について調べようか", last_assistant)
-            if match:
-                topic = match.group(1).strip()
-        # memory設定がOFFなどでcontextがない場合だけ、保存済み直近ターンも確認する。
-        if not topic and not messages:
+        # contextに今回のユーザー入力まで含まれる場合があるため、末尾だけでなく
+        # 履歴内の直近のメニューを探す。
+        menu_text = ""
+        menu_index = -1
+        for i in range(len(messages) - 1, -1, -1):
+            candidate = messages[i]
+            has_number_menu = (
+                    "1." in candidate
+                    and ("2. そのまま雑談を続ける" in candidate or "2. Web検索をする" in candidate)
+                    and ("3. 終了する" in candidate or "3. これで話を終わりにする" in candidate)
+            )
+            if has_number_menu:
+                menu_text = candidate
+                menu_index = i
+                break
+
+        # 履歴が渡されない呼び出しでは、内部の会話履歴を使う。
+        if not menu_text and not messages:
             turns = self.context_memory.get("turns", [])
             if turns and isinstance(turns[-1], dict):
-                last_assistant = str(turns[-1].get("assistant", ""))
-                has_preference_menu = (
-                        "1. Web検索をする" in last_assistant
-                        and "2. そのまま雑談を続ける" in last_assistant
-                        and "3. 終了する" in last_assistant
-                )
-                has_topic_menu = (
-                        "1." in last_assistant
-                        and "2. Web検索をする" in last_assistant
-                        and "3. これで話を終わりにする" in last_assistant
-                )
-                if has_preference_menu or has_topic_menu:
-                    match = re.search(r"よかったら「(.+?)」について調べようか", last_assistant)
-                    if match:
-                        topic = match.group(1).strip()
+                candidate = str(turns[-1].get("assistant", ""))
+                if ("1." in candidate and
+                        ("2. そのまま雑談を続ける" in candidate or "2. Web検索をする" in candidate) and
+                        ("3. 終了する" in candidate or "3. これで話を終わりにする" in candidate)):
+                    menu_text = candidate
+
+        if not menu_text:
+            return None
+
+        # 話題メニューなら表示文から、好み共有メニューなら直前のユーザー発言から話題を復元。
+        topic = None
+        match = re.search(r"よかったら「(.+?)」について調べようか", menu_text)
+        if match:
+            topic = match.group(1).strip()
+        if not topic:
+            # 会話履歴の末尾から「チワワが好き」などの発言を探す。
+            candidates = messages[:menu_index] if menu_index >= 0 else messages
+            for prior in reversed(candidates):
+                fact = self._detect_fact(prior)
+                if fact and fact[0] in ("好きな動物", "好きな色", "好きなもの"):
+                    topic = fact[1]
+                    break
+        if not topic:
+            # contextが今回の会話全体を含まないケース向けに、保存済みターンも確認。
+            for turn in reversed(self.context_memory.get("turns", [])):
+                if not isinstance(turn, dict):
+                    continue
+                fact = self._detect_fact(str(turn.get("user", "")))
+                if fact and fact[0] in ("好きな動物", "好きな色", "好きなもの"):
+                    topic = fact[1]
+                    break
         if not topic:
             return None
 
-        preference_menu = (
-                "1. Web検索をする" in last_assistant
-                and "2. そのまま雑談を続ける" in last_assistant
-                and "3. 終了する" in last_assistant
-        )
-        if preference_menu:
-            if choice == "1":
-                query = f"{topic}について"
-                researched, confidence, sources, error = self._research_answer(query, progress_callback=progress_callback)
-                if researched:
-                    answer = researched
-                    self._save_research_candidate(query, answer, confidence, sources)
-                else:
-                    answer = (error or f"「{topic}」について検索できなかったよ。") + "\n\n少し時間をおいてもう一度試してね。"
-                    self._save_research_candidate(query, answer, confidence, sources)
-            elif choice == "2":
-                answer = f"もちろん！「{topic}」について雑談しよう。どんなところが好きなの？"
-            else:
-                answer = f"了解！「{topic}」の話はここで終わりにしよう。またいつでも話しかけてね。"
-            self._remember_turn(choice, answer)
-            return answer
-
+        is_preference_menu = "2. Web検索をする" in menu_text and "3. 終了する" in menu_text
         if choice == "1":
-            q = re.sub(r"[\s　]+", "", topic).lower()
-            if re.search(r"(橋|はし)$", q):
-                answer = f"橋の話を続けよう！橋は川や道路、谷を渡るために作られていて、アーチ橋や吊り橋など構造にも種類があるよ。どんな橋が気になる？"
-            elif re.search(r"(猫|ねこ|ネコ)$", q):
-                answer = "猫の話をしよう！しぐさや性格、種類など、いろいろな話ができるよ。猫のどんなところが気になる？"
-            elif re.search(r"(マイクラ|マインクラフト|minecraft)$", q):
-                answer = "マイクラの話をしよう！建築・冒険・レッドストーン・軽量化など、どれについて話したい？"
+            if is_preference_menu:
+                answer = self._reply_variant((
+                    f"そうなんだね。君は「{topic}」のどんなところが好き？",
+                    f"へえ、「{topic}」が好きなんだね！君はそれについてどう感じた？",
+                    f"そうなんだね！「{topic}」のどんなところに惹かれるの？",
+                ))
             else:
-                answer = f"「{topic}」の話をもっとしよう！どのあたりが気になっている？特徴、仕組み、使い方などから一緒に話せるよ。"
+                answer = f"「{topic}」の話をもっとしよう！どんなところが気になっている？特徴や仕組みなど、一緒に話せるよ。"
         elif choice == "2":
             query = f"{topic}について"
             researched, confidence, sources, error = self._research_answer(query, progress_callback=progress_callback)
@@ -1601,7 +1594,8 @@ class JapaneseAI:
                 answer = (error or f"「{topic}」について検索できなかったよ。") + "\n\n少し時間をおいてもう一度試してね。"
                 self._save_research_candidate(query, answer, confidence, sources)
         else:
-            answer = f"了解！「{topic}」の話はここで終わりにしよう。また別の話題でも気軽に話しかけてね。"
+            answer = f"了解！「{topic}」の話はここで終わりにしよう。またいつでも話しかけてね。"
+
         self._remember_turn(choice, answer)
         return answer
 
@@ -3580,6 +3574,11 @@ class JapaneseAI:
         if not raw:
             return "何か話しかけてみてね。"
 
+        # 数字選択はプロフィール検出や通常会話より先に処理する。
+        selected = self._handle_topic_choice(raw, context, progress_callback=progress_callback)
+        if selected is not None:
+            return selected
+
         # 1. まず「情報を教える発言」かを判定する。
         # 「好きな動物は猫です」を質問と誤認して、古い記憶を返す不具合を防ぐ。
         detected_fact = self._detect_fact(raw)
@@ -3600,17 +3599,11 @@ class JapaneseAI:
                     "この話題で、こんなことができるよ！",
                     "続けるなら、次のどれかを選べるよ。",
                 ))
-                closing = self._reply_variant((
-                    f"「{value}」について調べたいなら1を選んでね。",
-                    f"もっと「{value}」について知りたければ、1で検索できるよ。",
-                    "番号を送ってくれたら、その選択に合わせて続けるよ。",
-                ))
                 return (
                     f"{opening}\n\n{invitation}\n"
-                    "1. Web検索をする\n"
-                    "2. そのまま雑談を続ける\n"
-                    "3. 終了する\n\n"
-                    f"{closing}（1・2・3）"
+                    "1. そのまま雑談を続ける\n"
+                    "2. Web検索をする\n"
+                    "3. 終了する"
                 )
             return self._reply_variant((
                 f"教えてくれてありがとう！ {label}を記憶したよ。",
@@ -3629,11 +3622,6 @@ class JapaneseAI:
         if taught is not None:
             self._remember_turn(raw, taught)
             return taught
-
-        # 3. 直前に提示した「1/2/3」メニューの選択を処理する。
-        selected = self._handle_topic_choice(raw, context, progress_callback=progress_callback)
-        if selected is not None:
-            return selected
 
         # 4. まず入力が単語・短いトピック名かを判定する。
         # 以前のバージョンが保存した web_auto 回答が残っている場合、古い要約を
