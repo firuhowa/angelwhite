@@ -3588,15 +3588,35 @@ class JapaneseAI:
             # 記憶設定が有効なら好みを保存するが、雑談の返答そのものは設定に依存させない。
             self._remember_turn(raw, f"{label}を{value}として記憶したよ。")
             if label in ("好きな動物", "好きな色", "好きなもの"):
+                opening = self._reply_variant((
+                    f"{value}が好きなんだね！",
+                    f"へえ、{value}が好きなんだ！",
+                    f"なるほど、{value}が好きなんだね。",
+                    f"{value}が好きなんだね。いいね！",
+                ))
+                invitation = self._reply_variant((
+                    "よろしければ、こんなこともできるよ。",
+                    "よかったら、次の中から選んでね。",
+                    "この話題で、こんなことができるよ！",
+                    "続けるなら、次のどれかを選べるよ。",
+                ))
+                closing = self._reply_variant((
+                    f"「{value}」について調べたいなら1を選んでね。",
+                    f"もっと「{value}」について知りたければ、1で検索できるよ。",
+                    "番号を送ってくれたら、その選択に合わせて続けるよ。",
+                ))
                 return (
-                    f"{value}が好きなんだね！\n\n"
-                    "よろしければ、このようなことができるよ。\n"
+                    f"{opening}\n\n{invitation}\n"
                     "1. Web検索をする\n"
                     "2. そのまま雑談を続ける\n"
                     "3. 終了する\n\n"
-                    f"よかったら「{value}」について調べようか？番号の1・2・3で選んでね。"
+                    f"{closing}（1・2・3）"
                 )
-            return f"教えてくれてありがとう！ {label}を記憶したよ。"
+            return self._reply_variant((
+                f"教えてくれてありがとう！ {label}を記憶したよ。",
+                f"なるほど！ {label}として覚えておくね。",
+                f"了解！ {label}のことを記憶したよ。",
+            ))
 
         # 2. 質問なら、保存済みのユーザー記憶を確認する。Web検索より優先。
         remembered = self._memory_answer(raw)
@@ -3730,16 +3750,32 @@ class JapaneseAI:
         if contextual is not None:
             answer = contextual
         elif self._is_greeting(raw):
-            answer = "こんにちは！ AngelWhiteだよ。何について話そうか？"
+            answer = self._reply_variant((
+                "こんにちは！ AngelWhiteだよ。今日は何を話そうか？",
+                "やあ！来てくれてありがとう。何か話したいことはある？",
+                "こんにちは！雑談でも質問でも、気軽に話しかけてね。",
+                "おっ、こんにちは！今日はどんな話をしようか？",
+            ))
         elif re.search(r"(ありがとう|ありがと|助かった|感謝)", raw):
-            answer = "どういたしまして！ またいつでも話しかけてね。"
+            answer = self._reply_variant((
+                "どういたしまして！ またいつでも話しかけてね。",
+                "役に立てたならうれしいよ！ほかにもあれば言ってね。",
+                "こちらこそ、話してくれてありがとう！",
+                "いつでもどうぞ！また気軽に聞いてね。",
+            ))
         elif re.search(r"(さようなら|じゃあね|またね|おやすみ)", raw):
-            answer = "またね！ いつでも話しかけてね。"
+            answer = self._reply_variant((
+                "またね！ いつでも話しかけてね。",
+                "話せてよかったよ。またいつでも来てね！",
+                "じゃあね！また話そう。",
+                "おやすみ。ゆっくり休んでね！" if re.search(r"おやすみ", raw) else "またね！次に話せるのを待ってるよ。",
+            ))
         elif re.search(r"(君の名前|あなたの名前|名前は何|誰なの|何者)", raw):
-            answer = (
-                "僕はAngelWhite。独自の回答エンジンと知識記憶を"
-                "少しずつ開発しているよ。"
-            )
+            answer = self._reply_variant((
+                "僕はAngelWhite。独自の回答エンジンと知識記憶を少しずつ開発しているよ。",
+                "AngelWhiteだよ！検索や会話ができる独自のAIを目指して開発中なんだ。",
+                "僕の名前はAngelWhite。これから少しずつできることを増やしていくよ。",
+            ))
         elif re.search(r"(何時|今の時間|現在時刻)", raw):
             answer = f'このPCの現在時刻は {now.strftime("%H:%M")} だよ。'
         elif re.search(r"(今日の日付|今日は何日|何月何日|今日の日にち)", raw):
@@ -3754,25 +3790,51 @@ class JapaneseAI:
             detected = self._detect_fact(raw)
             if detected:
                 label, value = detected
-                if label == "好きな色":
-                    answer = f"{value}が好きなんだね！ 教えてくれてありがとう。"
-                elif label == "好きなもの":
-                    answer = f"{value}が好きなんだね！ 教えてくれてありがとう。"
+                if label in ("好きな色", "好きなもの", "好きな動物"):
+                    answer = self._reply_variant((
+                        f"{value}が好きなんだね！教えてくれてありがとう。",
+                        f"へえ、{value}が好きなんだ！いいね。",
+                        f"なるほど、{value}がお気に入りなんだね。",
+                        f"{value}が好きなんだね。どんなところが好きなの？",
+                        f"いいね！{value}が好きなんだ。好きになったきっかけはある？",
+                    ))
                 else:
-                    answer = "そうなんだね！ 教えてくれてありがとう。"
+                    answer = self._reply_variant((
+                        "そうなんだね！教えてくれてありがとう。",
+                        "なるほど、そういう好みなんだね。",
+                        "へえ、そうなんだ！もう少し聞いてみたいな。",
+                    ))
             else:
                 match = re.search(
                     r"(?:俺|僕|私|わたし|自分)は(.{1,60}?)(が好き|が嫌い|が苦手|が得意)",
                     raw,
                 )
                 if match:
-                    reactions = {
-                        "が好き": "が好きなんだね！ 教えてくれてありがとう。",
-                        "が嫌い": "は嫌いなんだね。話してくれてありがとう。",
-                        "が苦手": "が苦手なんだね。教えてくれてありがとう。",
-                        "が得意": "が得意なんだね、いいね！",
+                    subject = match.group(1).strip()
+                    reaction_options = {
+                        "が好き": (
+                            f"{subject}が好きなんだね！どんなところが好き？",
+                            f"へえ、{subject}が好きなんだ！",
+                            f"なるほど、{subject}がお気に入りなんだね。",
+                            f"いいね！{subject}が好きなんだね。",
+                        ),
+                        "が嫌い": (
+                            f"{subject}は苦手なんだね。何か理由があるの？",
+                            f"そっか、{subject}は好きじゃないんだね。",
+                            f"なるほど、{subject}が苦手なんだね。",
+                        ),
+                        "が苦手": (
+                            f"{subject}が苦手なんだね。どのあたりが難しい？",
+                            f"そっか、{subject}はちょっと苦手なんだね。",
+                            f"なるほど！話してくれてありがとう。",
+                        ),
+                        "が得意": (
+                            f"{subject}が得意なんだ、すごいね！",
+                            f"いいね！{subject}が得意なんだね。",
+                            f"へえ、{subject}が得意なんだ！いつから得意なの？",
+                        ),
                     }
-                    answer = f"{match.group(1).strip()}{reactions[match.group(2)]}"
+                    answer = self._reply_variant(reaction_options[match.group(2)])
                 else:
                     answer = "そうなんだね！ 教えてくれてありがとう。"
         elif re.fullmatch(
@@ -3780,7 +3842,11 @@ class JapaneseAI:
                 raw,
         ):
             # 自分を動物に例える発言は、プロフィールの「好きな動物」には保存しない。
-            answer = "そうなんだ！ 犬の話でも、ほかの話でもできるよ。今日は何を話そうか？"
+            answer = self._reply_variant((
+                "そうなんだ！犬の話でも、ほかの話でもできるよ。今日は何を話そうか？",
+                "なるほど！動物の話をする？それとも別の話題にする？",
+                "そうなんだね！ほかにも好きなものがあったら教えて。",
+            ))
         elif re.search(r"(マイクラ|マインクラフト).*(やってる|遊んでる|プレイしてる|したことある)", raw):
             answer = self._general_conversation_answer(raw) or "僕自身がゲームを操作して遊ぶことはできないけど、マイクラの話ならできるよ！今日は何をしてたの？"
         elif re.search(r"(疲れた|つかれた|しんどい|眠い|ねむい)", raw):
