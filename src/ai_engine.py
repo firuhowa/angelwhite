@@ -75,6 +75,33 @@ class _SearchParser(HTMLParser):
 
 
 class JapaneseAI:
+    # 日本語の通常文ではほとんど使われない中国語の簡体字・繁体字を検出する。
+    # 日本語でも使う漢字全体を禁止せず、明確な混入の手掛かりを使う。
+    _CHINESE_ONLY_CHARS = frozenset(
+        "这说为与从来对时会发后里开关国过还进远运边达实现点间东书车门问题学"
+        "语汉龙马风云电气体无见听让给别种长条变数线场业产当经样现务区结论"
+        "這說為與從來對時會發後裡開關國過還進遠運邊達實現點間東書車門問題學"
+        "漢龍馬風雲電氣體無見聽讓給別種長條變數線場業產當經樣現務區結論"
+    )
+
+    @classmethod
+    def _is_usable_japanese_candidate(cls, text: str) -> bool:
+        """中国語の混入や日本語の説明になっていない断片を候補から外す。"""
+        value = str(text or "").strip()
+        if len(value) < 12 or any(char in cls._CHINESE_ONLY_CHARS for char in value):
+            return False
+        # かながなく、漢字と英数字だけでできた文は中国語の可能性が高い。
+        if not re.search(r"[\u3040-\u30ff]", value):
+            if re.search(r"[\u4e00-\u9fff]", value):
+                if not re.search(r"(?:です|ます|である|とは|として|など|ため|から|による|された|される)", value):
+                    return False
+            elif re.search(r"[A-Za-z]{3,}\s+[A-Za-z]{3,}", value) and not re.search(
+                    r"(?:```|print\s*\(|import\s+\w+|def\s+\w+|class\s+\w+|\.py\b)", value, re.IGNORECASE
+            ):
+                # 説明文が英語だけの場合は、日本語回答の候補にしない。
+                return False
+        return True
+
     # 「紫が好きです」のような文でも色として扱うための簡易色リスト。
     # 必要に応じてあとから追加できる。
     COLOR_WORDS = (
@@ -592,6 +619,16 @@ class JapaneseAI:
             return None
         if re.search(r"[\s\u3000\r\n\t。！？?!,，、:：;；]", raw):
             return None
+        # 「犬が好き」「ゲームが苦手」など、短くても文として成立する
+        # 好み・感情の共有を、単語だけの検索トピックとして扱わない。
+        # メモリ機能がOFFでも雑談ルートへ進めるよう、ここで先に除外する。
+        if re.search(
+                r"(?:が|は)(?:大好き|好き|嫌い|苦手|得意|かわいい|可愛い|かっこいい|カッコいい|"
+                r"面白い|おもしろい|楽しい|楽しかった|うれしい|嬉しい|最高|怖い|こわい|"
+                r"好きじゃない|嫌いじゃない)(?:です|だよ|だね|だ|なんだ|なんです)?$",
+                raw,
+        ):
+            return None
         normalized = raw.lower()
         ignored = {
             "おはよう", "こんにちは", "こんばんは", "やあ", "お疲れ", "お疲れ様",
@@ -944,6 +981,9 @@ class JapaneseAI:
                 for part in parts:
                     part = re.sub(r"^[-・•●○\s]+", "", part).strip()
                     part = re.sub(r"[\t\r\n]+", " ", part)
+                    # 中国語の検索結果が回答に混ざるのを防ぐ。
+                    if not cls._is_usable_japanese_candidate(part):
+                        continue
                     # 本文に付いた [5][6] などの脚注記号を除去する。
                     part = re.sub(r"\[\s*\d+(?:\s*[,;、]\s*\d+)*\s*\]", "", part)
                     # Wiki系の脚注記号 [ † 1 ] / [‡2] も除去する。
@@ -1482,8 +1522,18 @@ class JapaneseAI:
         messages = self._context_messages(context)
         last_assistant = messages[-1] if messages else ""
         topic = None
-        # 現在のチャット履歴で直前のAIメッセージがメニューの場合だけ選択として扱う。
-        if "1." in last_assistant and "2. Web検索をする" in last_assistant and "3. これで話を終わりにする" in last_assistant:
+        # 現在のチャット履歴で直前のAIメッセージが既存メニューか、好み共有メニューの場合だけ選択扱い。
+        has_preference_menu = (
+                "1. Web検索をする" in last_assistant
+                and "2. そのまま雑談を続ける" in last_assistant
+                and "3. 終了する" in last_assistant
+        )
+        has_topic_menu = (
+                "1." in last_assistant
+                and "2. Web検索をする" in last_assistant
+                and "3. これで話を終わりにする" in last_assistant
+        )
+        if has_preference_menu or has_topic_menu:
             match = re.search(r"よかったら「(.+?)」について調べようか", last_assistant)
             if match:
                 topic = match.group(1).strip()
@@ -1492,12 +1542,44 @@ class JapaneseAI:
             turns = self.context_memory.get("turns", [])
             if turns and isinstance(turns[-1], dict):
                 last_assistant = str(turns[-1].get("assistant", ""))
-                if "1." in last_assistant and "2. Web検索をする" in last_assistant and "3. これで話を終わりにする" in last_assistant:
+                has_preference_menu = (
+                        "1. Web検索をする" in last_assistant
+                        and "2. そのまま雑談を続ける" in last_assistant
+                        and "3. 終了する" in last_assistant
+                )
+                has_topic_menu = (
+                        "1." in last_assistant
+                        and "2. Web検索をする" in last_assistant
+                        and "3. これで話を終わりにする" in last_assistant
+                )
+                if has_preference_menu or has_topic_menu:
                     match = re.search(r"よかったら「(.+?)」について調べようか", last_assistant)
                     if match:
                         topic = match.group(1).strip()
         if not topic:
             return None
+
+        preference_menu = (
+                "1. Web検索をする" in last_assistant
+                and "2. そのまま雑談を続ける" in last_assistant
+                and "3. 終了する" in last_assistant
+        )
+        if preference_menu:
+            if choice == "1":
+                query = f"{topic}について"
+                researched, confidence, sources, error = self._research_answer(query, progress_callback=progress_callback)
+                if researched:
+                    answer = researched
+                    self._save_research_candidate(query, answer, confidence, sources)
+                else:
+                    answer = (error or f"「{topic}」について検索できなかったよ。") + "\n\n少し時間をおいてもう一度試してね。"
+                    self._save_research_candidate(query, answer, confidence, sources)
+            elif choice == "2":
+                answer = f"もちろん！「{topic}」について雑談しよう。どんなところが好きなの？"
+            else:
+                answer = f"了解！「{topic}」の話はここで終わりにしよう。またいつでも話しかけてね。"
+            self._remember_turn(choice, answer)
+            return answer
 
         if choice == "1":
             q = re.sub(r"[\s　]+", "", topic).lower()
@@ -2146,6 +2228,8 @@ class JapaneseAI:
                     part = re.sub(r"^[-・•●○\s]+", "", part).strip()
                     part = re.sub(r"\[\s*\d+(?:\s*[,;、]\s*\d+)*\s*\]", "", part)
                     part = re.sub(r"\s{2,}", " ", part).strip()
+                    if not cls._is_usable_japanese_candidate(part):
+                        continue
                     if len(part) < 18 or part.endswith(("?", "？")) or meta_re.search(part):
                         continue
                     # 見出し・記事タイトル断片は、説明文として再掲しない。
@@ -2606,15 +2690,9 @@ class JapaneseAI:
 
         # 関連性の低い結果で水増ししない。一致が弱い場合は不確実性を明示して候補を返す。
         if detailed_topic:
-            # 少し関連度が低い候補も残し、特定の1サイトだけで回答を作る状態を避ける。
-            # その後のドメイン重複除去で、異なるサイトを最大5件選ぶ。
-            relevant = [item for item in ranked if item["relevance"] >= 0.04 and not item.get("_promo_page")]
-            if len({item.get("_domain", "") for item in relevant if item.get("_domain")}) < 5:
-                fallback_candidates = [
-                    item for item in ranked
-                    if not item.get("_promo_page") and item not in relevant
-                ]
-                relevant.extend(fallback_candidates[:12])
+            # 関連度が低いページで5件を埋めると、同じ単語が含まれるだけの
+            # 別話題が回答に混ざりやすい。候補が少ない場合は件数を減らす。
+            relevant = [item for item in ranked if item["relevance"] >= 0.12 and not item.get("_promo_page")]
         else:
             relevant = [item for item in ranked if item["relevance"] >= 0.06]
             if not relevant:
@@ -2852,6 +2930,16 @@ class JapaneseAI:
             re.search(pattern, query, re.IGNORECASE)
             for pattern in explicit_patterns
         )
+        # 検索を明示されていない好み・感情の共有は、話題語が含まれていても検索しない。
+        # 例: 「犬が好き」「ゲームが楽しい」。ただし「犬が好きな理由を調べて」など
+        # 明示的な検索依頼は上の explicit_request を優先する。
+        if not explicit_request and re.search(
+                r"(?:が|は)(?:大好き|好き|嫌い|苦手|得意|かわいい|可愛い|かっこいい|カッコいい|"
+                r"面白い|おもしろい|楽しい|楽しかった|うれしい|嬉しい|最高|怖い|こわい|"
+                r"好きじゃない|嫌いじゃない)(?:です|だよ|だね|だ|なんだ|なんです)?[。！!]*$",
+                query,
+        ):
+            return False
         # 「首都を教えて」「ゲームの違いを説明して」など、疑問符のない知識依頼も拾う。
         factual_topic = bool(re.search(
             r"(首都|人口|面積|定義|意味|仕組み|原理|原因|理由|違い|比較|メリット|デメリット|"
@@ -3495,15 +3583,19 @@ class JapaneseAI:
         # 1. まず「情報を教える発言」かを判定する。
         # 「好きな動物は猫です」を質問と誤認して、古い記憶を返す不具合を防ぐ。
         detected_fact = self._detect_fact(raw)
-        if detected_fact and self.memory_enabled:
+        if detected_fact:
             label, value = detected_fact
+            # 記憶設定が有効なら好みを保存するが、雑談の返答そのものは設定に依存させない。
             self._remember_turn(raw, f"{label}を{value}として記憶したよ。")
-            if label == "好きな動物":
-                return f"{value}が好きなんだね！ 教えてくれてありがとう。記憶を更新したよ。"
-            if label == "好きな色":
-                return f"{value}が好きなんだね！ 教えてくれてありがとう。記憶を更新したよ。"
-            if label == "好きなもの":
-                return f"{value}が好きなんだね！ 教えてくれてありがとう。記憶を更新したよ。"
+            if label in ("好きな動物", "好きな色", "好きなもの"):
+                return (
+                    f"{value}が好きなんだね！\n\n"
+                    "よろしければ、このようなことができるよ。\n"
+                    "1. Web検索をする\n"
+                    "2. そのまま雑談を続ける\n"
+                    "3. 終了する\n\n"
+                    f"よかったら「{value}」について調べようか？番号の1・2・3で選んでね。"
+                )
             return f"教えてくれてありがとう！ {label}を記憶したよ。"
 
         # 2. 質問なら、保存済みのユーザー記憶を確認する。Web検索より優先。
