@@ -78,10 +78,11 @@ class JapaneseAI:
     # 日本語の通常文ではほとんど使われない中国語の簡体字・繁体字を検出する。
     # 日本語でも使う漢字全体を禁止せず、明確な混入の手掛かりを使う。
     _CHINESE_ONLY_CHARS = frozenset(
-        "这说为与从来对时会发后里开关国过还进远运边达实现点间东书车门问题学"
-        "语汉龙马风云电气体无见听让给别种长条变数线场业产当经样现务区结论"
-        "這說為與從來對時會發後裡開關國過還進遠運邊達實現點間東書車門問題學"
-        "漢龍馬風雲電氣體無見聽讓給別種長條變數線場業產當經樣現務區結論"
+        # 簡体字・中国語特有の字形を中心にする。日本語でも普通に使う
+        # 「開・発・学・国・会・体・間・問題」などを入れると、
+        # 「Web開発」「社会」「学習」といった自然な日本語まで誤って捨ててしまう。
+        "这说为与从对时发后里开关过还进远运边达实现点东书车门问题语汉龙马风云电无听让给别种长条变业产样务结论线场"
+        "這說為與從對會裡關遠邊實讓給條變數產當經區"
     )
 
     @classmethod
@@ -1124,7 +1125,7 @@ class JapaneseAI:
             # 文章間の重複はJaccard係数で判定する。短い文に共通の話題語が
             # 含まれるだけで、運動・健康など別の情報を落としてしまわないようにする。
             if any(
-                    (len(tokens & previous) / max(1, len(tokens | previous))) >= 0.72
+                    (len(tokens & previous) / max(1, len(tokens | previous))) >= 0.90
                     for previous in selected_token_sets
             ):
                 continue
@@ -1329,9 +1330,9 @@ class JapaneseAI:
                     if not re.search(r"インタプリタ|インタープリタ", item[1])
                 ]
 
-        feature_list = unique_sentence_list(feature_candidates, [overview], 6)
+        feature_list = unique_sentence_list(feature_candidates, [overview], 4)
         use_case_list = unique_sentence_list(
-            use_case_candidates, [overview, *feature_list], 5
+            use_case_candidates, [overview, *feature_list], 4
         )
         if python_topic:
             # 単語だけの「Python」説明では、Amoebaなど細かい開発環境の歴史より
@@ -1341,13 +1342,13 @@ class JapaneseAI:
                 if not re.search(r"\bAmoeba\b|最初のバージョン.{0,35}開発", item[1], re.IGNORECASE)
             ]
         history_list = unique_sentence_list(
-            history_candidates, [overview, *feature_list, *use_case_list], 3
+            history_candidates, [overview, *feature_list, *use_case_list], 2
         )
         version_list = unique_sentence_list(
-            version_candidates, [overview, *feature_list, *use_case_list, *history_list], 3
+            version_candidates, [overview, *feature_list, *use_case_list, *history_list], 2
         )
         care_list = unique_sentence_list(
-            care_candidates, [overview, *feature_list, *use_case_list, *history_list, *version_list], 4
+            care_candidates, [overview, *feature_list, *use_case_list, *history_list, *version_list], 3
         )
         governance_list = unique_sentence_list(
             governance_candidates,
@@ -1397,53 +1398,56 @@ class JapaneseAI:
         intro = (
             f"「{topic}」について、取得できたページ本文から要点を整理したよ。"
             if has_source_body
-            else f"「{topic}」について、検索結果の説明文から確認できた情報を整理したよ。"
+            else f"「{topic}」について、検索結果から確認できた情報を整理したよ。"
         )
         sections = [intro]
         if overview:
-            sections.extend(["---", "**概要・基本情報**", overview])
+            sections.extend(["## 概要", overview])
         else:
             sections.extend([
-                "**概要・基本情報**",
-                f"取得したページの中から、「{topic}」自体を定義する十分に明確な文章は確認できなかったよ。"
-                "宣伝文や話題の一部だけの文章で補わず、確認できた特徴を下にまとめるね。",
+                "## 概要",
+                f"取得したページから「{topic}」自体を明確に定義する文章は確認できなかったよ。"
+                "確認できた特徴や用途を下にまとめるね。",
             ])
         if feature_list:
-            sections.extend(["---", "**主な特徴・ポイント**"])
-            sections.extend(f"・{item}" for item in feature_list)
+            sections.extend(["---", "## 主な特徴"])
+            sections.extend(f"- {item}" for item in feature_list)
         if use_case_list:
-            sections.extend(["---", "**主な用途・活用例**"])
-            sections.extend(f"・{item}" for item in use_case_list)
+            sections.extend(["---", "## できること・活用例"])
+            sections.extend(f"- {item}" for item in use_case_list)
         if history_list:
-            sections.extend(["---", "**歴史・開発の背景**"])
-            sections.extend(f"・{item}" for item in history_list)
+            sections.extend(["---", "## 歴史・背景"])
+            sections.extend(f"- {item}" for item in history_list)
         if version_list:
-            sections.extend(["---", "**バージョン・公開情報**"])
-            sections.extend(f"・{item}" for item in version_list)
+            sections.extend(["---", "## バージョン情報"])
+            sections.extend(f"- {item}" for item in version_list)
         if care_list:
-            sections.extend(["---", "**注意点・補足**"])
-            sections.extend(f"・{item}" for item in care_list)
+            sections.extend(["---", "## 注意点・補足"])
+            sections.extend(f"- {item}" for item in care_list)
         if governance_list:
-            sections.extend(["---", "**開発体制**"])
-            sections.extend(f"・{item}" for item in governance_list)
+            sections.extend(["---", "## 開発体制"])
+            sections.extend(f"- {item}" for item in governance_list)
         if other_list:
-            sections.extend(["---", "**関連する技術・周辺情報"])
-            sections.extend(f"・{item}" for item in other_list)
+            sections.extend(["---", "## 関連情報"])
+            sections.extend(f"- {item}" for item in other_list)
 
         if not (feature_list or use_case_list or history_list or version_list or care_list or governance_list or other_list):
-            sections.append("取得できた本文には詳しい説明が少なかったため、確認できた情報だけを載せているよ。別の検索語でも調べられるよ。")
+            sections.append(
+                "取得できた本文には詳しい説明が少なかったため、確認できた情報だけを載せているよ。"
+            )
 
-        # 汎用的な候補だけを毎回出すのではなく、話題の種類に応じた次の探索先を示す。
-        if re.search(r"(python|java|javascript|プログラミング|ソフト|アプリ|コンピュータ|ai|人工知能)", topic, re.IGNORECASE):
-            sections.append("**次に調べられること**\n・始め方と環境構築\n・短いコード例\n・ライブラリや実用例")
-        elif re.search(r"(犬|猫|チワワ|柴犬|トイプードル|ペット|動物)", topic):
-            sections.append("**次に調べられること**\n・性格や種類の違い\n・飼い方と健康管理\n・費用や準備")
-        else:
-            sections.append("**次に調べられること**\n・仕組みの詳しい説明\n・種類や具体例\n・メリットと注意点")
-
-        # 「参考にしたページ」の一覧は回答末尾に作らない。
-        # 検索中のサイト名・取得件数はUI上の進捗表示で確認できる。
-        sections.append("※検索で取得できた本文から要点を整理した説明だよ。ページ本文が取得できない場合は、説明に使える情報が限られることがあるよ。")
+        # 検索で説明を返したあと、会話を続けるための3択メニューを必ず提示する。
+        # main.py側でこの3行をクリック可能なボタンに変換する。
+        sections.extend([
+            "---",
+            "よろしければ以下を教えてください",
+            "1. もっと詳しく知りたい",
+            "2. ほかのことについて話す",
+            "3. 終了する",
+        ])
+        sections.append(
+            "※検索で確認できたページの記述を整理した要約だよ。詳しい内容は下の出典ボタンから確認できるよ。"
+        )
         return "\n\n".join(sections)
 
     @staticmethod
@@ -1528,7 +1532,11 @@ class JapaneseAI:
             candidate = messages[i]
             has_number_menu = (
                     "1." in candidate
-                    and ("2. そのまま雑談を続ける" in candidate or "2. Web検索をする" in candidate)
+                    and (
+                            "2. そのまま雑談を続ける" in candidate
+                            or "2. Web検索をする" in candidate
+                            or "2. ほかのことについて話す" in candidate
+                    )
                     and ("3. 終了する" in candidate or "3. これで話を終わりにする" in candidate)
             )
             if has_number_menu:
@@ -1541,9 +1549,15 @@ class JapaneseAI:
             turns = self.context_memory.get("turns", [])
             if turns and isinstance(turns[-1], dict):
                 candidate = str(turns[-1].get("assistant", ""))
-                if ("1." in candidate and
-                        ("2. そのまま雑談を続ける" in candidate or "2. Web検索をする" in candidate) and
-                        ("3. 終了する" in candidate or "3. これで話を終わりにする" in candidate)):
+                if (
+                        "1." in candidate
+                        and (
+                        "2. そのまま雑談を続ける" in candidate
+                        or "2. Web検索をする" in candidate
+                        or "2. ほかのことについて話す" in candidate
+                )
+                        and ("3. 終了する" in candidate or "3. これで話を終わりにする" in candidate)
+                ):
                     menu_text = candidate
 
         if not menu_text:
@@ -1554,6 +1568,13 @@ class JapaneseAI:
         match = re.search(r"よかったら「(.+?)」について調べようか", menu_text)
         if match:
             topic = match.group(1).strip()
+        # 検索回答のあとに表示した「もっと詳しく知りたい」メニューでは、
+        # 回答冒頭の「『Python』について…」から、もう一度説明する対象を復元する。
+        is_research_followup_menu = "1. もっと詳しく知りたい" in menu_text
+        if not topic and is_research_followup_menu:
+            match = re.search(r"[「『](.+?)[」』]について", menu_text)
+            if match:
+                topic = match.group(1).strip()
         if not topic:
             # 会話履歴の末尾から「チワワが好き」などの発言を探す。
             candidates = messages[:menu_index] if menu_index >= 0 else messages
@@ -1575,7 +1596,27 @@ class JapaneseAI:
             return None
 
         is_preference_menu = "2. Web検索をする" in menu_text and "3. 終了する" in menu_text
-        if choice == "1":
+        if is_research_followup_menu:
+            if choice == "1":
+                # 詳細メニューの「1」は、同じ話題を対象に本文取得付きで再検索する。
+                query = f"{topic} 詳しく"
+                researched, confidence, sources, error = self._research_answer(
+                    query,
+                    detailed_topic=True,
+                    topic_label=topic,
+                    progress_callback=progress_callback,
+                )
+                if researched:
+                    answer = researched
+                    self._save_research_candidate(query, answer, confidence, sources, allow_auto_register=False)
+                else:
+                    answer = (error or f"「{topic}」について、追加の情報を取得できなかったよ。") + "\n\n別の聞き方でも試せるよ。"
+                    self._save_research_candidate(query, answer, confidence, sources, allow_auto_register=False)
+            elif choice == "2":
+                answer = "もちろん！次は何について話そうか？気になることを自由に入力してね。"
+            else:
+                answer = "了解！この話題はここで終わりにしよう。またいつでも話しかけてね。"
+        elif choice == "1":
             if is_preference_menu:
                 answer = self._reply_variant((
                     f"そうなんだね。君は「{topic}」のどんなところが好き？",
@@ -2774,19 +2815,31 @@ class JapaneseAI:
             else:
                 answer = self._build_topic_overview(topic_label or query, useful, fetched_paragraphs)
             # 詳細モードでは、複数ページの本文と検索スニペットを統合して回答を構成する。
+            # 出典行はmain.py側で本文から分離し、クリック可能な小さなボタンにする。
+            source_lines = []
+            for source in useful[:3]:
+                url = str(source.get("url", "")).strip()
+                title = self._clean_search_text(source.get("title", "出典ページ"))
+                if url.startswith(("https://", "http://")):
+                    source_lines.append(f"出典: {title or '出典ページ'} — {url}")
+            if source_lines:
+                answer = str(answer or "").rstrip() + "\n\n" + "\n".join(source_lines)
             return answer, confidence, useful, None
 
-        lines = []
+        details = []
+        source_lines = []
         for result in useful[:3]:
             detail = self._clean_search_text(result.get("snippet") or result.get("title", ""))
-            if len(detail) > 420:
-                detail = detail[:417].rstrip() + "…"
+            if len(detail) > 360:
+                detail = detail[:357].rstrip() + "…"
             if detail:
-                title = self._clean_search_text(result.get("title", "出典ページ"))
-                url = result.get("url", "")
-                lines.append(f"・{detail}\n  出典: {title} — {url}")
+                details.append(detail)
+            title = self._clean_search_text(result.get("title", "出典ページ"))
+            url = str(result.get("url", "")).strip()
+            if url.startswith(("https://", "http://")):
+                source_lines.append(f"出典: {title or '出典ページ'} — {url}")
 
-        if not lines:
+        if not details:
             return (
                 None,
                 confidence,
@@ -2804,13 +2857,26 @@ class JapaneseAI:
             intro = "質問に関係する説明を検索結果から整理するね。ページの記述をもとにした要約なので、違う説明がある場合は出典も比べてね。"
         else:
             intro = "検索結果から、質問に関連する情報をまとめるね。"
-        answer = intro + "\n\n" + "\n\n".join(lines)
+        # 検索スニペットを出典ごとに羅列するのでなく、短い導入と要点リストにまとめる。
+        if re.search(r"(違い|比較|メリット|デメリット|どっち|どちら)", query):
+            section_title = "## 比較のポイント"
+        elif re.search(r"(使い方|やり方|手順|どうやって|方法)", query):
+            section_title = "## 手順・使い方のポイント"
+        elif re.search(r"(なぜ|なんで|どうして|理由|仕組み|原理|原因)", query):
+            section_title = "## 確認できた説明"
+        else:
+            section_title = "## 検索結果の要点"
+        answer = intro + "\n\n" + section_title + "\n\n" + "\n\n".join(
+            f"- {detail}" for detail in details
+        )
         if confidence < 0.42 or mean_relevance < 0.08:
             answer += "\n\n※検索結果と質問の一致度が低めなので、参考候補として見てね。キーワードを絞ると、より合う情報を見つけやすいよ。"
         elif diversity < 2:
             answer += "\n\n※確認できた情報源が限られているため、内容は未確認の候補として扱ってね。"
         else:
-            answer += "\n\n※これは検索結果の要約だよ。重要な判断では、リンク先の本文や更新日も確認してね。"
+            answer += "\n\n※検索結果をもとに整理した要約だよ。重要な判断では、出典ボタンから本文や更新日も確認してね。"
+        if source_lines:
+            answer += "\n\n" + "\n".join(source_lines)
 
         for result in useful:
             result.pop("_domain", None)
@@ -2912,6 +2978,11 @@ class JapaneseAI:
         query = str(query or "").strip()
         if not query:
             return False
+
+        # 「チワワが好き」のような好み共有は、検索を明示していない限り必ず雑談扱い。
+        if self._detect_fact(query) and re.search(r"(?:が好き|がすき|大好き|好きだ|好きです|が嫌い|が苦手|が得意)", query):
+            if not re.search(r"(検索して|ウェブ検索|web検索|ネットで調べて|ネットで検索|調査して)", query, re.IGNORECASE):
+                return False
 
         intent = self._classify_intent(query)
         explicit_patterns = (
@@ -3579,37 +3650,25 @@ class JapaneseAI:
         if selected is not None:
             return selected
 
-        # 1. まず「情報を教える発言」かを判定する。
-        # 「好きな動物は猫です」を質問と誤認して、古い記憶を返す不具合を防ぐ。
+        # 1. 好みの共有は検索依頼ではなく会話として扱い、選択メニューを返す。
+        # 数字選択はこの判定より前で処理し、メニュー上の「2」を押した場合だけ検索する。
         detected_fact = self._detect_fact(raw)
         if detected_fact:
             label, value = detected_fact
-            # 記憶設定が有効なら好みを保存するが、雑談の返答そのものは設定に依存させない。
-            self._remember_turn(raw, f"{label}を{value}として記憶したよ。")
             if label in ("好きな動物", "好きな色", "好きなもの"):
-                opening = self._reply_variant((
-                    f"{value}が好きなんだね！",
-                    f"へえ、{value}が好きなんだ！",
-                    f"なるほど、{value}が好きなんだね。",
-                    f"{value}が好きなんだね。いいね！",
-                ))
-                invitation = self._reply_variant((
-                    "よろしければ、こんなこともできるよ。",
-                    "よかったら、次の中から選んでね。",
-                    "この話題で、こんなことができるよ！",
-                    "続けるなら、次のどれかを選べるよ。",
-                ))
-                return (
-                    f"{opening}\n\n{invitation}\n"
+                answer = (
+                    f"へえ、{value}が好きなんだ！\n\n"
+                    "この話題で、こんなことができるよ！\n"
                     "1. そのまま雑談を続ける\n"
                     "2. Web検索をする\n"
                     "3. 終了する"
                 )
-            return self._reply_variant((
-                f"教えてくれてありがとう！ {label}を記憶したよ。",
-                f"なるほど！ {label}として覚えておくね。",
-                f"了解！ {label}のことを記憶したよ。",
-            ))
+                # 内部メモリーにも実際に画面へ表示するメニューを保存し、
+                # 履歴が明示的に渡されない呼び出しでも数字選択を扱えるようにする。
+                self._remember_turn(raw, answer)
+                return answer
+            self._remember_turn(raw, f"{label}を{value}として記憶したよ。")
+            return f"教えてくれてありがとう！ {label}を記憶したよ。"
 
         # 2. 質問なら、保存済みのユーザー記憶を確認する。Web検索より優先。
         remembered = self._memory_answer(raw)

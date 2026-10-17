@@ -1,11 +1,14 @@
+
 import sys
 import json
 import mimetypes
 import math
+import re
+import html
 from pathlib import Path
 
-from PySide6.QtCore import Qt, QPoint, QPointF, QEvent, QThread, Signal
-from PySide6.QtGui import QFont, QPainter, QColor, QPixmap, QPolygonF
+from PySide6.QtCore import Qt, QPoint, QPointF, QEvent, QThread, Signal, QUrl
+from PySide6.QtGui import QFont, QPainter, QColor, QPixmap, QPolygonF, QDesktopServices
 from ai_engine import JapaneseAI
 
 from PySide6.QtWidgets import (
@@ -34,6 +37,94 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data"
 CHAT_FILE = DATA_DIR / "chats.json"
 MEMORY_SETTINGS_FILE = DATA_DIR / "memory_settings.json"
+
+
+
+def _render_markdown_for_label(markdown_text):
+    """AI回答の簡易MarkdownをQt QLabel用HTMLへ変換する（HTMLは入力側から無害化）。"""
+    text = str(markdown_text or "")
+    lines = text.splitlines()
+    output = []
+    list_type = None
+
+    def close_list():
+        nonlocal list_type
+        if list_type:
+            output.append(f"</{list_type}>")
+            list_type = None
+
+    token_pattern = re.compile(r"(\*\*.+?\*\*|`[^`]+`|\[[^\]]+\]\(https?://[^)\s]+\))")
+
+    def inline(value):
+        rendered = []
+        cursor = 0
+        for match in token_pattern.finditer(value):
+            rendered.append(html.escape(value[cursor:match.start()], quote=False))
+            token = match.group(0)
+            if token.startswith("**") and token.endswith("**"):
+                rendered.append("<b>" + html.escape(token[2:-2], quote=False) + "</b>")
+            elif token.startswith("`") and token.endswith("`"):
+                rendered.append(
+                    "<span style=\"font-family:Consolas,monospace;color:#d8c6ff;background-color:#28252f;\">"
+                    + html.escape(token[1:-1], quote=False) + "</span>"
+                )
+            else:
+                link = re.fullmatch(r"\[([^\]]+)\]\((https?://[^)\s]+)\)", token)
+                if link:
+                    label = html.escape(link.group(1), quote=False)
+                    url = html.escape(link.group(2), quote=True)
+                    rendered.append(f'<a href="{url}" style="color:#c4b5fd;text-decoration:underline;">{label}</a>')
+                else:
+                    rendered.append(html.escape(token, quote=False))
+            cursor = match.end()
+        rendered.append(html.escape(value[cursor:], quote=False))
+        return "".join(rendered)
+
+    for raw_line in lines:
+        line = raw_line.strip()
+        if not line:
+            close_list()
+            continue
+        if re.fullmatch(r"-{3,}|\*{3,}|_{3,}", line):
+            close_list()
+            output.append('<hr style="border:0;border-top:1px solid #3c3c43;margin:10px 0;"/>')
+            continue
+
+        heading = re.match(r"^(#{1,3})\s+(.+)$", line)
+        bold_heading = re.fullmatch(r"\*\*(.+?)\*\*", line)
+        if heading or bold_heading:
+            close_list()
+            title = heading.group(2) if heading else bold_heading.group(1)
+            level = len(heading.group(1)) if heading else 3
+            if level <= 2:
+                style = "font-size:16px;font-weight:700;color:#ffffff;margin:15px 0 6px 0;"
+            else:
+                style = "font-size:14px;font-weight:700;color:#eeeeF5;margin:12px 0 5px 0;"
+            output.append(f'<p style="{style}">{inline(title.strip("*"))}</p>')
+            continue
+
+        bullet = re.match(r"^(?:[-*+]|[・•●])\s*(.+)$", line)
+        ordered = re.match(r"^\d+[.．]\s*(.+)$", line)
+        if bullet or ordered:
+            target_type = "ul" if bullet else "ol"
+            if list_type and list_type != target_type:
+                close_list()
+            if not list_type:
+                list_type = target_type
+                output.append(f'<{list_type} style="margin:2px 0 10px 0;padding-left:22px;">')
+            content = bullet.group(1) if bullet else ordered.group(1)
+            output.append(f'<li style="margin:3px 0;">{inline(content)}</li>')
+            continue
+
+        close_list()
+        output.append(f'<p style="margin:0 0 8px 0;line-height:1.5;">{inline(line)}</p>')
+
+    close_list()
+    return (
+            '<div style="font-family:Segoe UI,sans-serif;font-size:14px;color:#f2f2f2;">'
+            + "".join(output)
+            + "</div>"
+    )
 
 
 # =========================================================
@@ -403,12 +494,13 @@ class ClickableImageLabel(QLabel):
 
 class ChatMessage(QWidget):
     """ユーザーは右寄せバブル、AIは中央の会話カラムに表示する。"""
-    def __init__(self, text, attachments=None, role="user"):
+    def __init__(self, text, attachments=None, role="user", menu_choice_callback=None):
         super().__init__()
 
         self.message_text = text
         self.attachments = attachments or []
         self.role = role
+        self.menu_choice_callback = menu_choice_callback
         is_assistant = role == "assistant"
 
         layout = QHBoxLayout(self)
@@ -483,9 +575,73 @@ class ChatMessage(QWidget):
 
         if text:
             if is_assistant:
-                answer_label = QLabel(text)
+                # 検索回答の「出典: タイトル — URL」は本文から分離し、
+                # 小さなクリック可能なソースチップとして表示する。
+                display_text = text
+                source_items = []
+                source_pattern = re.compile(r'^\s*(?:出典|参照元)[:：]\s*(.*?)\s*[—–-]\s*(https?://\S+)\s*$', re.IGNORECASE)
+                body_lines = []
+                non_source_lines = []
+                menu_items = []
+                menu_patterns = (
+                    (re.compile(r'^\s*1[.．]\s*(?:そのまま雑談を続ける|もっと詳しく知りたい)\s*$'), '1', None),
+                    (re.compile(r'^\s*2[.．]\s*(?:Web検索をする|ほかのことについて話す)\s*$'), '2', None),
+                    (re.compile(r'^\s*3[.．]\s*終了する\s*$'), '3', '終了する'),
+                )
+                for line in text.splitlines():
+                    match = source_pattern.match(line)
+                    if match:
+                        title, url = match.group(1).strip(), match.group(2).strip()
+                        if url.endswith(('。', ',', '，')):
+                            url = url[:-1]
+                        source_items.append((title or 'Webページ', url))
+                        continue
+
+                    # 出典行は本文には入れず、リンクボタン用データとして保持する。
+                    # メニュー判定に失敗した場合も、出典URLを本文へ戻さない。
+                    non_source_lines.append(line)
+                    matched_menu = False
+                    for pattern, choice, fixed_label in menu_patterns:
+                        if pattern.match(line):
+                            label = re.sub(r'^\s*\d+[.．]\s*', '', line).strip()
+                            menu_items.append((choice, label or fixed_label or '選択する'))
+                            matched_menu = True
+                            break
+                    if not matched_menu:
+                        body_lines.append(line)
+
+                # 3項目すべてそろった場合だけ、メニューを実際にクリックできるボタンとして表示。
+                # メニューが不完全なら、その選択肢の文字列は本文に戻す。ただし出典行は戻さない。
+                if {item[0] for item in menu_items} != {'1', '2', '3'}:
+                    body_lines = non_source_lines
+                    menu_items = []
+
+                # 検索回答の注意書きは、選択ボタンの下・出典ボタンの上に配置する。
+                # メニューがない通常回答では本文の位置を変えない。
+                footer_lines = []
+                if menu_items:
+                    kept_body_lines = []
+                    for line in body_lines:
+                        stripped = line.strip()
+                        if stripped.startswith((
+                                '※検索で確認できたページの記述を整理した要約',
+                                '※検索結果をもとに整理した要約',
+                                '※取得できた本文から関係する部分を整理した要約',
+                        )):
+                            footer_lines.append(line)
+                        else:
+                            kept_body_lines.append(line)
+                    body_lines = kept_body_lines
+
+                display_text = '\n'.join(body_lines).strip()
+                answer_label = QLabel(_render_markdown_for_label(display_text))
+                answer_label.setTextFormat(Qt.TextFormat.RichText)
                 answer_label.setWordWrap(True)
-                answer_label.setTextInteractionFlags(Qt.TextInteractionFlag.TextSelectableByMouse)
+                answer_label.setOpenExternalLinks(True)
+                answer_label.setTextInteractionFlags(
+                    Qt.TextInteractionFlag.TextSelectableByMouse
+                    | Qt.TextInteractionFlag.LinksAccessibleByMouse
+                )
                 answer_label.setMinimumWidth(560)
                 answer_label.setMaximumWidth(780)
                 answer_label.setSizePolicy(
@@ -503,6 +659,101 @@ class ChatMessage(QWidget):
                     }
                 """)
                 message_column.addWidget(answer_label, alignment=Qt.AlignmentFlag.AlignLeft)
+
+                if menu_items:
+                    menu_row = QHBoxLayout()
+                    menu_row.setContentsMargins(0, 2, 0, 2)
+                    menu_row.setSpacing(7)
+                    for choice, label in menu_items:
+                        menu_button = QPushButton(f"{choice}. {label}")
+                        menu_button.setCursor(Qt.CursorShape.PointingHandCursor)
+                        menu_button.setFixedHeight(30)
+                        menu_button.setStyleSheet("""
+                            QPushButton {
+                                color: #e8e8ed;
+                                background-color: #292a30;
+                                border: 1px solid #3a3b43;
+                                border-radius: 15px;
+                                padding: 3px 11px;
+                                font-family: "Segoe UI";
+                                font-size: 11px;
+                            }
+                            QPushButton:hover {
+                                background-color: #383941;
+                                border-color: #666875;
+                            }
+                            QPushButton:pressed { background-color: #202126; }
+                            QPushButton:disabled {
+                                color: #77777f;
+                                background-color: #202126;
+                            }
+                        """)
+                        if self.menu_choice_callback is not None:
+                            menu_button.clicked.connect(
+                                lambda checked=False, selected=choice: self.menu_choice_callback(selected)
+                            )
+                        else:
+                            menu_button.setEnabled(False)
+                        menu_row.addWidget(menu_button)
+                    menu_row.addStretch(1)
+                    message_column.addLayout(menu_row)
+
+                if footer_lines:
+                    footer_label = QLabel(_render_markdown_for_label('\n'.join(footer_lines).strip()))
+                    footer_label.setTextFormat(Qt.TextFormat.RichText)
+                    footer_label.setWordWrap(True)
+                    footer_label.setOpenExternalLinks(True)
+                    footer_label.setTextInteractionFlags(
+                        Qt.TextInteractionFlag.TextSelectableByMouse
+                        | Qt.TextInteractionFlag.LinksAccessibleByMouse
+                    )
+                    footer_label.setStyleSheet("""
+                        QLabel {
+                            color: #a5a5ad;
+                            background: transparent;
+                            border: none;
+                            font-family: "Segoe UI";
+                            font-size: 12px;
+                            padding: 0;
+                        }
+                    """)
+                    message_column.addWidget(footer_label, alignment=Qt.AlignmentFlag.AlignLeft)
+
+                if source_items:
+                    source_row = QHBoxLayout()
+                    source_row.setContentsMargins(0, 2, 0, 2)
+                    source_row.setSpacing(6)
+                    for source_title, source_url in source_items:
+                        # 長いサイト名は短く表示し、複数件は「+N」でまとめる。
+                        host = QUrl(source_url).host().removeprefix("www.")
+                        label = source_title or host or "Webページ"
+                        label = re.sub(r"\s+", " ", label).strip()
+                        if len(label) > 24:
+                            label = label[:22] + "…"
+                        chip = QPushButton("🌐 " + label)
+                        chip.setCursor(Qt.CursorShape.PointingHandCursor)
+                        chip.setToolTip(source_title + "\n" + source_url)
+                        chip.setFixedHeight(26)
+                        chip.setStyleSheet("""
+                            QPushButton {
+                                color: #d7d7dc;
+                                background-color: #292a30;
+                                border: 1px solid #3a3b43;
+                                border-radius: 13px;
+                                padding: 2px 10px;
+                                font-family: "Segoe UI";
+                                font-size: 11px;
+                            }
+                            QPushButton:hover {
+                                background-color: #383941;
+                                border-color: #555762;
+                            }
+                            QPushButton:pressed { background-color: #202126; }
+                        """)
+                        chip.clicked.connect(lambda checked=False, url=source_url: QDesktopServices.openUrl(QUrl(url)))
+                        source_row.addWidget(chip)
+                    source_row.addStretch(1)
+                    message_column.addLayout(source_row)
 
                 # AI回答の下に、縦長の紙を詰めて重ねた独自コピーアイコンを表示。
                 action_row = QHBoxLayout()
@@ -2968,7 +3219,8 @@ class AngelWhiteWindow(QMainWindow):
                     widget = ChatMessage(
                         message.get("text", ""),
                         message.get("attachments", []),
-                        role=message.get("role", "user")
+                        role=message.get("role", "user"),
+                        menu_choice_callback=self._send_menu_choice if message.get("role", "user") == "assistant" else None,
                     )
                 else:
                     widget = ChatMessage(message)
@@ -3026,6 +3278,13 @@ class AngelWhiteWindow(QMainWindow):
     # =====================================================
     # メッセージ送信
     # =====================================================
+
+    def _send_menu_choice(self, choice):
+        """会話メニューのボタン選択を通常の送信処理へ渡す。"""
+        if self._answer_pending:
+            return
+        self.input.setText(str(choice))
+        self.send_message()
 
     def send_message(self):
         if self._answer_pending:
@@ -3132,7 +3391,7 @@ class AngelWhiteWindow(QMainWindow):
         if target is not None:
             target["messages"].append({"role": "assistant", "text": answer})
             if str(self.current_chat_id) == str(chat_id):
-                assistant_widget = ChatMessage(answer, role="assistant")
+                assistant_widget = ChatMessage(answer, role="assistant", menu_choice_callback=self._send_menu_choice)
                 self.chat_layout.insertWidget(self.chat_layout.count() - 1, assistant_widget)
                 self.scroll_to_bottom()
             self.save_chats()
